@@ -84,7 +84,7 @@ p("Google Cybersecurity Professional Certificate", "entry")
 p(escape(profile["course_status"]).capitalize() + ". Linux, SQL, Python, network security and incident analysis.")
 
 p("LANGUAGES AND ADDITIONAL INFORMATION", "section")
-p("Polish: native · English: B2 · Category B driving licence<br/>Open to on-site work and occasional business travel.")
+p("Polish: native · English: C1 · Category B driving licence<br/>Open to on-site work and occasional business travel.")
 
 target = ROOT / "docs" / "assets" / "krzysztof-czarnecki-cv.pdf"
 target.parent.mkdir(parents=True, exist_ok=True)
