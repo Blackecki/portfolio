@@ -1,0 +1,37 @@
+{
+  "@type": "Person",
+  "@id": "https://blackecki.github.io/portfolio/#person",
+  "name": "Krzysztof Czarnecki",
+  "givenName": "Krzysztof",
+  "familyName": "Czarnecki",
+  "alternateName": "Blackecki",
+  "url": "https://blackecki.github.io/portfolio/about.html",
+  "description": "Junior IT Support candidate and programming-track graduate with INF.03. Hands-on Windows/Linux, virtual machine and Raspberry Pi experience; personal Python and web application projects; cybersecurity coursework.",
+  "email": "mailto:krzysztof.c.tech@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Pruszcz Gdański",
+    "addressCountry": "PL"
+  },
+  "sameAs": [
+    "https://github.com/Blackecki",
+    "https://www.linkedin.com/in/krzysztofczarnecki/"
+  ],
+  "knowsLanguage": ["Polish", "English (B2)"],
+  "knowsAbout": ["Windows", "Linux", "Virtual machines", "TCP/IP", "DNS", "DHCP", "Python", "SQL", "Git", "Pi-hole", "coreboot", "Phishing analysis"],
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Pomorskie Szkoły Rzemiosł"
+  },
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "INF.03 — Creating and administering websites and databases",
+    "credentialCategory": "Vocational qualification"
+  },
+  "subjectOf": {
+    "@type": "DigitalDocument",
+    "name": "Krzysztof Czarnecki — Junior IT Support CV",
+    "url": "https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf",
+    "encodingFormat": "application/pdf"
+  }
+}

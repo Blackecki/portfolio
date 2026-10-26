@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About — {{name}}</title>
-  <meta name="description" content="About {{name}}'s cybersecurity learning portfolio and the scope of its educational projects.">
+  <title>{{name}} — Junior IT Support candidate</title>
+  <meta name="description" content="Krzysztof Czarnecki: Junior IT Support candidate in Pruszcz Gdański. INF.03, Windows/Linux lab, Pi-hole, coreboot, Python projects and English B2. View project evidence and contact details.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -14,8 +14,14 @@
     <div class="layout">
       <aside class="sidebar" aria-label="Profile links"><section><h2>Based in</h2><p>Pruszcz Gdański, Poland</p></section><section><h2>Elsewhere</h2><ul><li><a href="https://github.com/Blackecki">GitHub profile ↗</a></li><li><a href="https://www.linkedin.com/in/krzysztofczarnecki/">LinkedIn ↗</a></li><li><a href="assets/krzysztof-czarnecki-cv.pdf">CV (PDF, English)</a></li></ul></section></aside>
       <main id="main" class="article">
-        <h1>About</h1>
-        <p>I'm Krzysztof Czarnecki, also known as Blackecki on GitHub. I completed a programming-focused technical secondary school and am developing my skills for junior IT support and cybersecurity roles.</p>
+        <h1>Krzysztof Czarnecki</h1>
+        <p class="intro">Junior IT Support candidate based in Pruszcz Gdański, Poland. Programming-track graduate with INF.03, hands-on Windows/Linux experience and personal projects in networking, Python and web security. Also known as Blackecki on GitHub.</p>
+        <h2>What I bring to an entry-level IT team</h2>
+        <ul>
+          <li><strong>Practical systems experience:</strong> a Raspberry Pi/Pi-hole home lab, Windows/Linux virtual machines and a coreboot installation using Skulls.</li>
+          <li><strong>Code you can review:</strong> <a href="https://github.com/Blackecki/Cryplab">Cryplab</a> implements SHA-256 hashing and AES-GCM text encryption; <a href="https://github.com/Blackecki/retro-forum">Retro Forum</a> includes authentication and login attempt limits.</li>
+          <li><strong>Clear documentation:</strong> <a href="index.html#case-notes">incident case notes</a> explain evidence, uncertainty and proposed next steps. My work background also includes preparing reports and handling documents.</li>
+        </ul>
         <h2>Education and training</h2>
         <ul><li>Pomorskie Szkoły Rzemiosł — technical secondary school, programming track. Completed in 2026.</li><li>Passed INF.03: creating and administering websites and databases.</li><li>Google Cybersecurity Professional Certificate — {{course_status}}.</li></ul>
         <h2 id="practical-work">Practical work</h2>
@@ -31,11 +37,13 @@
         <h2>Scope of the work</h2>
         <p>The incident case notes are course exercises; the software projects and home lab are personal work. References to employees, affected hosts and SOC escalation in the case notes belong to the supplied scenarios. Suggested investigation and response steps are not presented as actions performed on real systems.</p>
         <h2 id="contact">CV and contact</h2>
-        <p><a href="assets/krzysztof-czarnecki-cv.pdf" download="Krzysztof_Czarnecki_CV.pdf">Download my CV (PDF, English)</a></p>
+        <p><a href="assets/krzysztof-czarnecki-cv.pdf" download="Krzysztof_Czarnecki_CV.pdf" data-cv-download>Download my CV (PDF, English)</a></p>
+        <p class="small muted" data-download-status role="status" aria-live="polite"></p>
         <p><a href="mailto:krzysztof.c.tech@gmail.com">krzysztof.c.tech@gmail.com</a><br><a href="https://www.linkedin.com/in/krzysztofczarnecki/">LinkedIn</a> · <a href="https://github.com/Blackecki">GitHub</a></p>
       </main>
     </div>
     <footer class="footer"><span>{{name}} · Portfolio</span><a href="https://github.com/Blackecki/portfolio">View on GitHub</a></footer>
   </div>
+  <script src="assets/cv-download.js" defer></script>
 </body>
 </html>

@@ -28,6 +28,7 @@ Then open `http://127.0.0.1:8765`.
 
 - Edit page content in `site/pages/`.
 - Edit the name and course status once in `site/profile.json`.
+- Edit the factual Schema.org profile in `site/person.json` and the concise source-linked summary in `site/llms.txt`.
 - Edit the stylesheet in `docs/assets/style.css`.
 - Edit the shared theme control in `site/partials/theme-picker.html` and behavior in `docs/assets/theme.js`.
 - Run `python tools/build_site.py` to update the publishable HTML.
@@ -37,6 +38,10 @@ Then open `http://127.0.0.1:8765`.
 The course is currently recorded as being in its final stage. Change `course_status` to `completed` after completion, then rebuild the site and CV. A certificate link can be added once available.
 
 The CV uses the owner's supplied CV and corrections. Warehouse and merchandising roles are summarized without invented employers or dates. Fuller personal-project write-ups can be added when the relevant setup details and evidence are available.
+
+The builder adds canonical URLs, author and sharing metadata, Person/WebSite/WebPage JSON-LD, a structured `profile.json`, a `sitemap.xml`, and a source-linked `llms.txt` summary. The visible page copy and machine-readable claims describe the same evidence. These improve readability and discovery; they do not guarantee indexing or hiring recommendations. GitHub project Pages cannot set the host-root robots.txt from this repository, so no ineffective project-level robots file is added.
+
+Only the explicit CV download in About → CV and contact downloads the file. With JavaScript enabled it fetches the PDF and saves a binary blob to avoid PDF preview interception. Without JavaScript, the native download attribute remains available. Other CV links are previews.
 
 ## GitHub Pages setup
 

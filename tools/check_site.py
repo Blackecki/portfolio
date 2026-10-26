@@ -3,6 +3,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 import re
+import json
+import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "docs"
@@ -18,6 +20,7 @@ class Page(HTMLParser):
         self.language = None
         self.viewport = False
         self.errors = []
+        self.download_links = []
         self.feed(path.read_text(encoding="utf-8"))
 
     def handle_starttag(self, tag, attrs):
@@ -36,11 +39,14 @@ class Page(HTMLParser):
             value = attrs.get("href", attrs.get("src"))
             if value is not None:
                 self.references.append(value)
+        if tag == "a" and "download" in attrs:
+            self.download_links.append(attrs)
 
 
 pages = {path.resolve(): Page(path) for path in SITE.rglob("*.html")}
 errors = []
 references = 0
+downloads = 0
 for path, page in pages.items():
     prefix = str(path.relative_to(ROOT))
     errors.extend(f"{prefix}: {error}" for error in page.errors)
@@ -48,6 +54,20 @@ for path, page in pages.items():
         errors.append(f"{prefix}: missing or duplicate page structure")
     if re.search(r"\{\{[^}]+\}\}", path.read_text(encoding="utf-8")):
         errors.append(f"{prefix}: unresolved template variable")
+    downloads += len(page.download_links)
+    for link in page.download_links:
+        if path.name != "about.html" or "data-cv-download" not in link:
+            errors.append(f"{prefix}: download must be limited to CV and contact")
+    schemas = re.findall(r'<script type="application/ld\+json">(.*?)</script>', path.read_text(encoding="utf-8"), re.S)
+    if not schemas:
+        errors.append(f"{prefix}: missing structured profile")
+    for schema in schemas:
+        try:
+            graph = json.loads(schema)["@graph"]
+            if not any(node.get("@type") == "Person" and node.get("name") for node in graph):
+                errors.append(f"{prefix}: structured profile has no named Person")
+        except (ValueError, KeyError, TypeError):
+            errors.append(f"{prefix}: invalid structured data")
     for ref in page.references:
         references += 1
         url = urlsplit(ref)
@@ -71,6 +91,14 @@ for path, page in pages.items():
         elif url.fragment and target in pages and unquote(url.fragment) not in pages[target].ids:
             errors.append(f"{prefix}: missing anchor: {ref}")
 
+if downloads != 1:
+    errors.append("Exactly one explicit CV download link is required")
+json.loads((SITE / "profile.json").read_text(encoding="utf-8"))
+locations = ET.parse(SITE / "sitemap.xml").findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}loc")
+if len(locations) != len(pages):
+    errors.append("Sitemap does not cover all HTML pages")
+if "{{" in (SITE / "llms.txt").read_text(encoding="utf-8"):
+    errors.append("Profile summary contains an unresolved template value")
 if errors:
     raise SystemExit("\n".join(errors))
-print(f"PASS: {len(pages)} pages; {references} references; local links, anchors and source files verified.")
+print(f"PASS: {len(pages)} pages; {references} references; links, anchors, profile metadata, sitemap and CV download scope verified.")
