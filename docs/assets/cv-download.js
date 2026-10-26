@@ -2,15 +2,25 @@
 document.addEventListener('DOMContentLoaded', () => {
   const link = document.querySelector('[data-cv-download]');
   const status = document.querySelector('[data-download-status]');
-  if (!link || !status) return;
+  const row = document.querySelector('[data-cv-download-row]');
+  const indicator = document.querySelector('[data-download-indicator]');
+  if (!link || !status || !row || !indicator) return;
   let busy = false;
+  let resetTimer;
+  function feedback(state, message, hint) {
+    row.dataset.state = state;
+    status.textContent = message;
+    indicator.title = hint;
+  }
   link.addEventListener('click', async event => {
     if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
     if (busy) return;
     busy = true;
+    clearTimeout(resetTimer);
     link.setAttribute('aria-disabled', 'true');
-    status.textContent = 'Preparing your download…';
+    link.setAttribute('aria-busy', 'true');
+    feedback('loading', 'Preparing your download…', 'Preparing download');
     try {
       const response = await fetch(link.href, { credentials: 'same-origin' });
       if (!response.ok) throw new Error('PDF unavailable');
@@ -27,12 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
       save.click();
       save.remove();
       setTimeout(() => URL.revokeObjectURL(url), 30000);
-      status.textContent = 'Download requested. Check your browser’s downloads.';
+      feedback('success', 'Download requested. Check your browser’s downloads.', 'Download requested');
+      resetTimer = setTimeout(() => feedback('idle', '', 'Download PDF'), 4000);
     } catch (_) {
-      status.textContent = 'Could not download the CV. Please try again.';
+      feedback('error', 'Could not download the CV. Please try again.', 'Download failed. Click the link to try again.');
     } finally {
       busy = false;
       link.removeAttribute('aria-disabled');
+      link.removeAttribute('aria-busy');
     }
   });
 });
