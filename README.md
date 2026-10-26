@@ -33,6 +33,7 @@ The site uses static HTML, CSS and a small amount of JavaScript, hosted on GitHu
 | `site/` | Page templates, shared components and profile data. |
 | `docs/` | Published website and assets. |
 | `tools/` | Site generation, CV generation and validation scripts. |
+| `brand/` | Blackecki vector logo, transparent PNG exports, profile icon and identity kit. |
 | Repository root | Original coursework reports and worksheets. |
 
 ## Local development
