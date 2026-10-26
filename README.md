@@ -28,7 +28,6 @@ Then open `http://127.0.0.1:8765`.
 
 - Edit page content in `site/pages/`.
 - Edit the name and course status once in `site/profile.json`.
-- Edit factual machine-readable profile information in `site/person.json`; it is included as Schema.org JSON-LD on the home and About pages.
 - Edit the stylesheet in `docs/assets/style.css`.
 - Edit the shared theme control in `site/partials/theme-picker.html` and behavior in `docs/assets/theme.js`.
 - Run `python tools/build_site.py` to update the publishable HTML.
@@ -38,8 +37,6 @@ Then open `http://127.0.0.1:8765`.
 The course is currently recorded as being in its final stage. Change `course_status` to `completed` after completion, then rebuild the site and CV. A certificate link can be added once available.
 
 The CV uses the owner's supplied CV and corrections. Warehouse and merchandising roles are summarized without invented employers or dates. Fuller personal-project write-ups can be added when the relevant setup details and evidence are available.
-
-CV links request a direct same-origin PDF download with a readable filename. Machine-readable profile metadata describes the same qualifications and projects as the visible pages; it makes no hiring or ranking instructions.
 
 ## GitHub Pages setup
 

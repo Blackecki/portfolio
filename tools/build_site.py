@@ -10,16 +10,11 @@ SOURCE = ROOT / "site" / "pages"
 DESTINATION = ROOT / "docs"
 profile = json.loads((ROOT / "site" / "profile.json").read_text(encoding="utf-8"))
 theme_picker = (ROOT / "site" / "partials" / "theme-picker.html").read_text(encoding="utf-8")
-person = json.loads((ROOT / "site" / "person.json").read_text(encoding="utf-8"))
-person["name"] = profile["name"]
 
 for source in sorted(SOURCE.rglob("*.html")):
     rendered = source.read_text(encoding="utf-8")
     rendered = rendered.replace('<html lang="en">', '<html lang="en" data-theme="midnight">', 1)
     relative = source.relative_to(SOURCE)
-    if relative.as_posix() in ("index.html", "about.html"):
-        metadata = json.dumps(person, ensure_ascii=False, indent=2).replace("</", "<\\/")
-        rendered = rendered.replace("</head>", f'<script type="application/ld+json">\n{metadata}\n</script>\n</head>', 1)
     asset_prefix = "../" * (len(relative.parts) - 1)
     rendered = rendered.replace("</header>", theme_picker + "</header>", 1)
     rendered = rendered.replace('<link rel="stylesheet"', f'<script src="{asset_prefix}assets/theme.js"></script>\n<link rel="stylesheet"', 1)
