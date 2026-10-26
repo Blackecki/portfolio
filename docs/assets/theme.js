@@ -23,20 +23,44 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     const picker = document.querySelector('[data-theme-picker]');
-    const select = document.querySelector('#theme-choice');
-    if (!picker || !select) return;
-    select.value = preference;
+    if (!picker) return;
+    const summary = picker.querySelector('summary');
+    const choices = [...picker.querySelectorAll('input[name="theme"]')];
+    const currentName = picker.querySelector('[data-theme-name]');
+    function syncControls() {
+      choices.forEach(choice => { choice.checked = choice.value === preference; });
+      currentName.textContent = preference.charAt(0).toUpperCase() + preference.slice(1);
+    }
+    function closePanel(restoreFocus = false) {
+      picker.open = false;
+      if (restoreFocus) summary.focus();
+    }
+    syncControls();
     picker.hidden = false;
-    select.addEventListener('change', () => {
-      if (!themes.includes(select.value)) return;
-      preference = select.value;
+    picker.addEventListener('change', (event) => {
+      if (!choices.includes(event.target) || !themes.includes(event.target.value)) return;
+      preference = event.target.value;
       applyTheme();
+      syncControls();
       try { localStorage.setItem(storageKey, preference); } catch (_) { /* Optional persistence. */ }
+    });
+    picker.querySelector('[data-theme-close]').addEventListener('click', () => closePanel(true));
+    document.addEventListener('pointerdown', event => {
+      if (picker.open && !picker.contains(event.target)) closePanel();
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && picker.open) {
+        event.preventDefault();
+        closePanel(true);
+      }
+    });
+    picker.addEventListener('focusout', event => {
+      if (event.relatedTarget && !picker.contains(event.relatedTarget)) closePanel();
     });
     window.addEventListener('storage', (event) => {
       if (event.key !== storageKey && event.key !== null) return;
       preference = themes.includes(event.newValue) ? event.newValue : 'light';
-      select.value = preference;
+      syncControls();
       applyTheme();
     });
   });

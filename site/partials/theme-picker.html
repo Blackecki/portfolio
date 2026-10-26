@@ -1,11 +1,15 @@
-<div class="theme-picker" data-theme-picker hidden>
-  <label for="theme-choice">Theme</label>
-  <select id="theme-choice" name="theme">
-    <option value="light">Light</option>
-    <option value="dark">Dark</option>
-    <option value="paper">Paper</option>
-    <option value="midnight">Midnight</option>
-    <option value="terminal">Terminal</option>
-    <option value="system">System</option>
-  </select>
-</div>
+<details class="theme-picker" data-theme-picker hidden>
+  <summary aria-label="Appearance settings"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor" stroke="none"/></svg><span>Appearance</span><span class="theme-current" data-theme-name>Light</span><span class="theme-chevron" aria-hidden="true">⌄</span></summary>
+  <div class="theme-panel">
+    <div class="theme-panel-heading"><span>Appearance</span><button type="button" data-theme-close aria-label="Close appearance settings">×</button></div>
+    <fieldset><legend>Choose a theme</legend><div class="theme-options">
+<label class="theme-option"><input type="radio" name="theme" value="light" aria-label="Light"><span class="theme-option-body"><span class="theme-preview" data-preview="light" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Light<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Clean and bright</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="dark" aria-label="Dark"><span class="theme-option-body"><span class="theme-preview" data-preview="dark" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Dark<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Soft charcoal</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="paper" aria-label="Paper"><span class="theme-option-body"><span class="theme-preview" data-preview="paper" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Paper<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Warm and muted</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="midnight" aria-label="Midnight"><span class="theme-option-body"><span class="theme-preview" data-preview="midnight" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Midnight<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Deep navy</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="terminal" aria-label="Terminal"><span class="theme-option-body"><span class="theme-preview" data-preview="terminal" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Terminal<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Green monospace</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="system" aria-label="System"><span class="theme-option-body"><span class="theme-preview" data-preview="system" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">System<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Match your device</span></span></label>
+    </div></fieldset>
+    <p class="theme-footnote">Your choice is saved on this browser.</p>
+  </div>
+</details>
