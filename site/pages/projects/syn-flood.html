@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Understanding a SYN flood incident — {{name}}</title>
+  <meta name="description" content="A course case study linking incomplete TCP handshakes to a SYN flood hypothesis, with verification steps and limitations.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="site">
+    <header class="masthead"><a class="wordmark" href="../index.html">{{name}}</a><span class="site-label">cybersecurity portfolio</span></header>
+    <nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Projects</a><a href="../materials.html">Materials</a><a href="../about.html">About</a><a href="../assets/krzysztof-czarnecki-cv.pdf">CV</a><a class="external" href="https://github.com/Blackecki">GitHub ↗</a></nav>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Case navigation"><section class="contents"><h2>On this page</h2><ul><li><a href="#summary">Summary</a></li><li><a href="#mechanism">TCP handshake</a></li><li><a href="#verification">Verification</a></li><li><a href="#response">Possible response</a></li><li><a href="#sources">Sources</a></li></ul></section><section><h2>Context</h2><p>Google Cybersecurity Certificate</p><p class="muted">Course exercise<br>TCP · Denial of service</p></section></aside>
+      <main id="main" class="article">
+        <p class="breadcrumb"><a href="../index.html">Projects</a> / SYN flood incident</p>
+        <h1>Understanding a SYN flood incident</h1>
+        <div class="meta"><span>Course exercise</span><span>TCP · Incident reporting</span></div>
+        <p class="intro">The exercise describes a website becoming unavailable while a server receives many connection requests that do not complete the TCP handshake.</p>
+        <h2 id="summary">Summary</h2>
+        <p>The original report describes a high volume of SYN packets from <code>203.0.113.0</code> to <code>192.0.2.1</code>, SYN-ACK replies, and missing final ACKs. This pattern is consistent with the SYN flood scenario presented in the course.</p>
+        <p>The write-up explains the mechanism. It does not independently establish an attack rate, identify the sender, or measure server resource exhaustion.</p>
+        <h2 id="mechanism">Where the handshake stops</h2>
+        <div class="table-scroll"><table>
+          <thead><tr><th scope="col">Step</th><th scope="col">Normal connection</th><th scope="col">Reported pattern</th></tr></thead>
+          <tbody>
+            <tr><td>1 · SYN</td><td>Client requests a connection.</td><td>Many requests arrive.</td></tr>
+            <tr><td>2 · SYN-ACK</td><td>Server acknowledges and responds.</td><td>The server sends replies.</td></tr>
+            <tr><td>3 · ACK</td><td>Client acknowledges, completing the handshake.</td><td>The final acknowledgements are reported missing.</td></tr>
+          </tbody>
+        </table></div>
+        <p>Depending on the server's implementation and defenses, incomplete connections can consume connection-tracking or backlog capacity. Legitimate clients may then experience connection delays or timeouts.</p>
+        <h2 id="verification">What would strengthen the finding</h2>
+        <ul>
+          <li>A packet capture with a defined time window and capture location.</li>
+          <li>Counts of SYN requests, completed handshakes and retransmissions, compared with normal traffic.</li>
+          <li>Server metrics showing backlog pressure or dropped connections during the same period.</li>
+          <li>Checks for packet loss, asymmetric visibility and other reasons that ACK packets might be absent from a capture.</li>
+        </ul>
+        <p>A source address in captured traffic is not sufficient to identify a person or prove distributed origins.</p>
+        <h2 id="response">Possible response</h2>
+        <p>Review supported SYN flood protections, connection limits and upstream filtering with the service owner. Any change should be evaluated against legitimate traffic and monitored for impact.</p>
+        <p>These are proposed response considerations. No mitigation was deployed or tested as part of this report.</p>
+        <h2 id="sources">Sources</h2>
+        <ul class="reading-list">
+          <li><a href="https://github.com/Blackecki/portfolio/blob/main/Cybersecurity%20incident%20report.docx">Original SYN flood incident report ↗</a><span>DOCX · Completed course exercise</span></li>
+          <li><a href="https://www.rfc-editor.org/rfc/rfc4987.html">RFC 4987: TCP SYN Flooding Attacks and Common Mitigations ↗</a><span>Technical reference · Mechanism and mitigation trade-offs</span></li>
+        </ul>
+        <div class="next"><a href="../index.html">← All projects</a><a href="phishing.html">Phishing investigation →</a></div>
+      </main>
+    </div>
+    <footer class="footer"><span>{{name}} · Portfolio</span><a href="https://github.com/Blackecki/portfolio">View on GitHub</a></footer>
+  </div>
+</body>
+</html>

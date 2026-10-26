@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phishing email investigation — Krzysztof Czarnecki</title>
+  <meta name="description" content="A Google Cybersecurity course case study on suspicious email, file reputation and SOC escalation, with evidence and limitations.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="site">
+    <header class="masthead"><a class="wordmark" href="../index.html">Krzysztof Czarnecki</a><span class="site-label">cybersecurity portfolio</span></header>
+    <nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Projects</a><a href="../materials.html">Materials</a><a href="../about.html">About</a><a href="../assets/krzysztof-czarnecki-cv.pdf">CV</a><a class="external" href="https://github.com/Blackecki">GitHub ↗</a></nav>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Case navigation">
+        <section class="contents"><h2>On this page</h2><ul><li><a href="#summary">Summary</a></li><li><a href="#evidence">Evidence</a></li><li><a href="#decision">Escalation decision</a></li><li><a href="#next-steps">Further investigation</a></li><li><a href="#limitations">Limitations</a></li><li><a href="#sources">Source material</a></li></ul></section>
+        <section><h2>Context</h2><p>Google Cybersecurity Certificate</p><p class="muted">Course exercise<br>Ticket A-2703</p></section>
+      </aside>
+      <main id="main" class="article">
+        <p class="breadcrumb"><a href="../index.html">Projects</a> / Phishing investigation</p>
+        <h1>Phishing email investigation</h1>
+        <div class="meta"><span>Course exercise</span><span>Email analysis · File reputation · Triage</span></div>
+        <p class="intro">A recruitment email contains a suspicious executable attachment. The exercise asks whether the alert should be escalated for further investigation.</p>
+        <h2 id="summary">Summary</h2>
+        <p>The supplied scenario describes an employee downloading and opening <code>bfsvc.exe</code>. The exercise report records a known malicious file hash and an escalation to SOC Level 2.</p>
+        <p>Escalation is justified by the reported opening of the file and its malicious reputation. The email's spelling mistakes and sender inconsistencies support suspicion, but do not establish execution or compromise on their own.</p>
+        <h2 id="evidence">Evidence and interpretation</h2>
+        <div class="table-scroll"><table>
+          <thead><tr><th scope="col">Available information</th><th scope="col">What it supports</th></tr></thead>
+          <tbody>
+            <tr><td>A job application email supplies an <code>.exe</code> attachment.</td><td>The file type is inconsistent with an ordinary CV or cover letter and warrants investigation.</td></tr>
+            <tr><td>Sender identity inconsistencies and spelling errors.</td><td>Supporting phishing indicators. Neither is conclusive in isolation.</td></tr>
+            <tr><td>The ticket states that the file was downloaded and opened.</td><td>A reason to investigate the endpoint. This is scenario information, not independently reviewed process telemetry.</td></tr>
+            <tr><td>The accompanying VirusTotal exercise reports malicious detections for the file hash.</td><td>Evidence of the file's malicious reputation. It does not establish the full impact on the affected host.</td></tr>
+          </tbody>
+        </table></div>
+        <p class="small muted">SHA-256 recorded in both exercise reports:</p>
+        <code class="hash">54e6ea47eb04634d3e87fd7787e2136ccfbcc80ade34f246a12cf93bab527f6b</code>
+        <h2 id="decision">Escalation decision</h2>
+        <p>The ticket is marked <strong>Medium</strong> in the supplied material. The report escalates it to Level 2 because the file was reportedly opened. A real investigation would reassess priority using endpoint evidence, affected assets and the organization's severity criteria.</p>
+        <p>A useful handover would include the original email, affected account and device, relevant timestamps with their time zone, the attachment hash, and the source of the execution claim.</p>
+        <h2 id="next-steps">Further investigation</h2>
+        <p>These are proposed follow-up steps; they were not performed as part of this write-up.</p>
+        <ol>
+          <li>Obtain the original message and full headers to examine the delivery path and available authentication results.</li>
+          <li>Review endpoint telemetry for the attachment, process ancestry, child processes and outbound connections.</li>
+          <li>Search mail and endpoint logs for the same attachment hash and related indicators to assess scope.</li>
+          <li>Assess containment with the incident owner under the applicable response procedure.</li>
+        </ol>
+        <h2 id="limitations">Limitations</h2>
+        <p>This analysis uses the completed course ticket and the accompanying file-reputation exercise. It does not include independent malware execution, reverse engineering, a fresh VirusTotal query, or endpoint forensics.</p>
+        <p>The threat-intelligence worksheet associates the hash with Flagpro and BlackTech. That is a reported association, not an independently verified attribution of this incident to a threat actor.</p>
+        <h2 id="sources">Source material</h2>
+        <ul class="reading-list">
+          <li><a href="https://github.com/Blackecki/portfolio/blob/main/Phishing%20Email%20Investigation%20%26%20SOC%20Alert%20Escalation%20%E2%80%93%20Security%20Ticket%20Analysis.pdf">Original phishing ticket and analysis ↗</a><span>PDF · Completed course exercise</span></li>
+          <li><a href="https://github.com/Blackecki/portfolio/blob/main/Malware%20Analysis%20%26%20Threat%20Intelligence%20%E2%80%93%20VirusTotal%20and%20Pyramid%20of%20Pain.pdf">VirusTotal and Pyramid of Pain worksheet ↗</a><span>PDF · Supporting course exercise</span></li>
+        </ul>
+        <div class="next"><a href="../index.html">← All projects</a><a href="dns.html">DNS service failure →</a></div>
+      </main>
+    </div>
+    <footer class="footer"><span>Krzysztof Czarnecki · Portfolio</span><a href="https://github.com/Blackecki/portfolio">View on GitHub</a></footer>
+  </div>
+</body>
+</html>
