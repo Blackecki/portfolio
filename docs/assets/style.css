@@ -64,7 +64,6 @@ a:focus-visible, summary:focus-visible, button:focus-visible { outline: 2px soli
 .theme-picker summary::-webkit-details-marker { display: none; }
 .theme-picker summary:hover, .theme-picker[open] summary { border-color: var(--link); }
 .theme-current { color: var(--muted); padding-left: 9px; border-left: 1px solid var(--line); }
-.theme-chevron { font-size: 15px; }
 .theme-panel { position: absolute; top: calc(100% + 10px); right: 0; width: 340px; max-width: calc(100vw - 48px); padding: 17px; background: var(--paper); border: 1px solid var(--line); border-radius: 7px; box-shadow: 0 14px 38px #0003; max-height: min(600px, 75vh); overflow-y: auto; }
 .theme-panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-weight: bold; }
 .theme-panel-heading button { border: 0; background: none; color: var(--muted); width: 30px; height: 30px; font-size: 22px; cursor: pointer; border-radius: 3px; }
