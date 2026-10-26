@@ -14,7 +14,7 @@ These are **educational exercises**, not claims of professional incident respons
 
 ## Website
 
-The publishable site is in `docs/`. It uses static HTML and CSS, system fonts and no third-party scripts, tracking, or package dependencies. It works without JavaScript.
+The publishable site is in `docs/`. It uses static HTML and CSS, system fonts and no third-party scripts, tracking, or package dependencies. All content and navigation work without JavaScript. A small local script adds the theme selector: Light, Dark, Paper, Midnight, Terminal and System. Preferences are saved locally in the visitor's browser; printing always uses a light palette.
 
 Preview locally from the repository root:
 
@@ -29,6 +29,7 @@ Then open `http://127.0.0.1:8765`.
 - Edit page content in `site/pages/`.
 - Edit the name and course status once in `site/profile.json`.
 - Edit the stylesheet in `docs/assets/style.css`.
+- Edit the shared theme control in `site/partials/theme-picker.html` and behavior in `docs/assets/theme.js`.
 - Run `python tools/build_site.py` to update the publishable HTML.
 - Run `python tools/build_cv.py` to update the one-page English CV (requires ReportLab and the Windows Arial fonts).
 - Run `python tools/check_site.py` to check local links, anchors, source-file references and unresolved placeholders.
