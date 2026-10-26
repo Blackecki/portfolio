@@ -81,8 +81,11 @@ variants = {
     "blackecki-logo-white.svg": svg(lockup("#ffffff", "#ffffff"), width, 96, "Blackecki"),
     "blackecki-mark.svg": svg(f'<path d="{MARK}" fill="#4169a5" fill-rule="evenodd"/>', 96, 96, "Blackecki B symbol"),
     "blackecki-mark-white.svg": svg(f'<path d="{MARK}" fill="#ffffff" fill-rule="evenodd"/>', 96, 96, "Blackecki B symbol"),
-    "blackecki-avatar.svg": svg('<rect width="96" height="96" rx="8" fill="#17233a"/>\n'
-        f'<path d="{MARK}" fill="#b4c7ff" fill-rule="evenodd"/>', 96, 96, "Blackecki icon"),
+    "blackecki-avatar.svg": svg('<rect width="96" height="96" fill="#17233a"/>\n'
+        f'<path d="{MARK}" transform="translate(10.56 10.56) scale(.78)" fill="#b4c7ff" fill-rule="evenodd"/>',
+        96, 96, "Blackecki avatar with circular crop clearance"),
+    "blackecki-favicon.svg": svg('<rect width="96" height="96" rx="8" fill="#17233a"/>\n'
+        f'<path d="{MARK}" fill="#b4c7ff" fill-rule="evenodd"/>', 96, 96, "Blackecki browser icon"),
 }
 for filename, content in variants.items():
     (OUT / filename).write_text(content, encoding="utf-8")

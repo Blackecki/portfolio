@@ -8,7 +8,8 @@ Znak osobisty zbudowany z geometrycznej litery B oraz napisu „blackecki”. Dw
 - `blackecki-logo-on-light` — pełne logo na jasne tło.
 - `blackecki-logo-black` i `blackecki-logo-white` — wersje jednobarwne.
 - `blackecki-mark` — sam znak B, bez napisu.
-- `blackecki-avatar` — ikona na granatowym tle, odpowiednia do profilu i favicony.
+- `blackecki-avatar` — kwadratowy avatar z marginesem zabezpieczającym literę B przy okrągłym kadrowaniu na GitHubie.
+- `blackecki-favicon` — ikona karty przeglądarki, z większym znakiem dla czytelności w małym rozmiarze.
 
 Każda wersja jest dostępna jako SVG oraz PNG. Pełne logo w PNG ma szerokość 2400 px; znaki i ikony mają 1024 × 1024 px. Pliki SVG składają się z krzywych i nie wymagają instalowania fontów. Fonty nie są dołączone do zestawu.
 
