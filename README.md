@@ -14,7 +14,7 @@ These are **educational exercises**, not claims of professional incident respons
 
 ## Website
 
-The publishable site is in `docs/`. It uses static HTML and CSS, system fonts and no third-party scripts, tracking, or package dependencies. All content and navigation work without JavaScript. An Appearance panel offers palette previews for Light, Dark, Paper, Midnight, Terminal and System. Native radio controls support keyboard selection; Escape, the close button or an outside click closes the panel. Preferences are saved locally in the visitor's browser; printing always uses a light palette.
+The publishable site is in `docs/`. It uses static HTML and CSS, system fonts and no third-party scripts, tracking, or package dependencies. All content and navigation work without JavaScript. Midnight is the default theme, including without JavaScript; saved visitor preferences take priority. An Appearance panel offers palette previews for Light, Dark, Paper, Midnight, Terminal and System. Native radio controls support keyboard selection; Escape, the close button or an outside click closes the panel. Preferences are saved locally in the visitor's browser; printing always uses a light palette. Project links cover their entire tile, with a keyboard focus outline.
 
 Preview locally from the repository root:
 

@@ -13,6 +13,7 @@ theme_picker = (ROOT / "site" / "partials" / "theme-picker.html").read_text(enco
 
 for source in sorted(SOURCE.rglob("*.html")):
     rendered = source.read_text(encoding="utf-8")
+    rendered = rendered.replace('<html lang="en">', '<html lang="en" data-theme="midnight">', 1)
     relative = source.relative_to(SOURCE)
     asset_prefix = "../" * (len(relative.parts) - 1)
     rendered = rendered.replace("</header>", theme_picker + "</header>", 1)

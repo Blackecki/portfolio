@@ -2,9 +2,10 @@
 (() => {
   'use strict';
   const storageKey = 'kc-portfolio-theme';
+  const defaultTheme = 'midnight';
   const themes = ['light', 'dark', 'paper', 'midnight', 'terminal', 'system'];
   const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
-  let preference = 'light';
+  let preference = defaultTheme;
   try {
     const stored = localStorage.getItem(storageKey);
     if (themes.includes(stored)) preference = stored;
@@ -59,7 +60,7 @@
     });
     window.addEventListener('storage', (event) => {
       if (event.key !== storageKey && event.key !== null) return;
-      preference = themes.includes(event.newValue) ? event.newValue : 'light';
+      preference = themes.includes(event.newValue) ? event.newValue : defaultTheme;
       syncControls();
       applyTheme();
     });
