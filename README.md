@@ -1,57 +1,52 @@
-# Krzysztof Czarnecki — Cybersecurity portfolio
+# Krzysztof Czarnecki — IT Support & Cybersecurity
 
-Coursework from the Google Cybersecurity Professional Certificate, with revised case notes explaining the available evidence, conclusions and limitations.
+My portfolio brings together practical work with Windows, Linux and networking, personal software projects, and cybersecurity case studies. I am a programming-track graduate with INF.03, developing my skills for junior IT support roles.
 
-The portfolio also introduces my background in programming-focused technical education (INF.03 passed), warehouse and merchandising work, a school placement, and personal work with virtual machines, Pi-hole and coreboot.
+**[Visit the portfolio](https://blackecki.github.io/portfolio/)** · **[CV](https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf)** · **[LinkedIn](https://www.linkedin.com/in/krzysztofczarnecki/)**
 
-## Selected case studies
+This repository contains the portfolio website, its source files and the original coursework reports. The software projects below have their own repositories.
 
-- [Phishing investigation](docs/projects/phishing.html): suspicious email, file reputation and the reasoning behind SOC escalation.
-- [DNS service failure](docs/projects/dns.html): ICMP errors, alternative explanations and a corrected interpretation of the original report.
-- [SYN flood incident](docs/projects/syn-flood.html): incomplete TCP handshakes, the reported traffic pattern and verification steps.
+## Personal projects
 
-These are **educational exercises**, not claims of professional incident response. Proposed follow-up actions are distinguished from completed work. The original reports are preserved at the repository root.
+| Project | Focus |
+| --- | --- |
+| [Cryplab](https://github.com/Blackecki/Cryplab) | Python command-line tool with SHA-256 text and file hashing, AES-GCM text encryption and key export. |
+| [Retro Forum](https://github.com/Blackecki/retro-forum) | Next.js application with Prisma/SQLite, JWT sessions, bcrypt password checks and login attempt limits. |
+| [Home lab and ThinkPad firmware](https://blackecki.github.io/portfolio/about.html#practical-work) | Raspberry Pi with Pi-hole, Windows/Linux virtual machines, and a coreboot installation following the Skulls documentation. |
+
+## Cybersecurity case studies
+
+- [Phishing email investigation](https://blackecki.github.io/portfolio/projects/phishing.html) — suspicious attachment analysis, file reputation and the rationale for SOC escalation.
+- [DNS service failure](https://blackecki.github.io/portfolio/projects/dns.html) — interpreting DNS/ICMP errors, evaluating possible causes and identifying further checks.
+- [SYN flood incident](https://blackecki.github.io/portfolio/projects/syn-flood.html) — incomplete TCP handshakes, availability impact and investigation requirements.
+
+These case studies are based on Google Cybersecurity Professional Certificate exercises. Each write-up distinguishes the supplied evidence, interpretation and proposed follow-up actions. Original reports are available through the [materials page](https://blackecki.github.io/portfolio/materials.html).
 
 ## Website
 
-The publishable site is in `docs/`. It uses static HTML and CSS, system fonts and no third-party scripts, tracking, or package dependencies. All content and navigation work without JavaScript. Midnight is the default theme, including without JavaScript; saved visitor preferences take priority. An Appearance panel offers palette previews for Light, Dark, Paper, Midnight, Terminal and System. Native radio controls support keyboard selection; Escape, the close button or an outside click closes the panel. Preferences are saved locally in the visitor's browser; printing always uses a light palette. Project links cover their entire tile, with a keyboard focus outline.
+The site uses static HTML, CSS and a small amount of JavaScript, hosted on GitHub Pages. It includes responsive layouts, keyboard navigation, selectable colour themes and a downloadable CV. Content and navigation remain accessible without JavaScript.
 
-Preview locally from the repository root:
+## Repository structure
+
+| Path | Contents |
+| --- | --- |
+| `site/` | Page templates, shared components and profile data. |
+| `docs/` | Published website and assets. |
+| `tools/` | Site generation, CV generation and validation scripts. |
+| Repository root | Original coursework reports and worksheets. |
+
+## Local development
+
+Building and checking the website requires Python 3.9 or later, using only the standard library.
 
 ```sh
+python tools/build_site.py
+python tools/check_site.py
 python -m http.server 8765 --bind 127.0.0.1 --directory docs
 ```
 
-Then open `http://127.0.0.1:8765`.
+Open [localhost:8765](http://127.0.0.1:8765/) to preview the site. The separate CV generator, `tools/build_cv.py`, requires ReportLab and the Windows Arial fonts.
 
-## Editing
+## Contact
 
-- Edit page content in `site/pages/`.
-- Edit the name and course status once in `site/profile.json`.
-- Edit the factual Schema.org profile in `site/person.json` and the concise source-linked summary in `site/llms.txt`.
-- Edit the stylesheet in `docs/assets/style.css`.
-- Edit the shared theme control in `site/partials/theme-picker.html` and behavior in `docs/assets/theme.js`.
-- Run `python tools/build_site.py` to update the publishable HTML.
-- Run `python tools/build_cv.py` to update the one-page English CV (requires ReportLab and the Windows Arial fonts).
-- Run `python tools/check_site.py` to check local links, anchors, source-file references and unresolved placeholders.
-
-The course is currently recorded as being in its final stage. Change `course_status` to `completed` after completion, then rebuild the site and CV. A certificate link can be added once available.
-
-The CV uses the owner's supplied CV and corrections. Warehouse and merchandising roles are summarized without invented employers or dates. Fuller personal-project write-ups can be added when the relevant setup details and evidence are available.
-
-The builder adds canonical URLs, author and sharing metadata, Person/WebSite/WebPage JSON-LD, a structured `profile.json`, a `sitemap.xml`, and a source-linked `llms.txt` summary. The visible page copy and machine-readable claims describe the same evidence. These improve readability and discovery; they do not guarantee indexing or hiring recommendations. GitHub project Pages cannot set the host-root robots.txt from this repository, so no ineffective project-level robots file is added.
-
-Only the explicit CV download in About → CV and contact downloads the file. With JavaScript enabled it fetches the PDF and saves a binary blob to avoid PDF preview interception. Without JavaScript, the native download attribute remains available. Other CV links are previews.
-
-## GitHub Pages setup
-
-In the repository's **Settings → Pages**, choose **Deploy from a branch**, branch **main**, folder **/docs**, then save. Once the source is pushed and publication completes, the expected address is `https://blackecki.github.io/portfolio/`.
-
-The `docs/.nojekyll` file keeps publication buildless. Relative internal links support both local preview and the `/portfolio/` project URL.
-
-## Source notes
-
-- The DNS case note corrects the original report's ICMP message classification and unsupported DDoS conclusion.
-- The materials page notes the outdated periodic password-change recommendation in the original risk report.
-- The phishing `.docx` at the repository root contains an HTML error page rather than a Word document. The site links to the valid PDF instead.
-- No original course document has been overwritten.
+[krzysztof.c.tech@gmail.com](mailto:krzysztof.c.tech@gmail.com)
