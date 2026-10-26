@@ -1,0 +1,25 @@
+Cryplab functional verification
+Date: 26 October 2026
+Source commit: b56f464fe9b16eae49bf57ee680993d185a3356d
+Python: 3.12.14
+cryptography: 50.0.2
+
+Scope: direct tests of cryp/hashing.py and cryp/encryption.py.
+Method: known SHA-256 answers, standard-library file digest comparison,
+encryption round trips, and authentication failure checks.
+
+PASS - SHA-256 known answer for abc
+PASS - SHA-256 empty text
+PASS - SHA-256 file larger than the read buffer
+PASS - AES-256 key length
+PASS - AES-GCM Unicode round trip
+PASS - AES-GCM empty text round trip
+PASS - Modified ciphertext rejected
+PASS - Wrong key rejected
+PASS - Base64 key export/import round trip
+
+Result: 9/9 checks passed.
+
+Limitations: this is a point-in-time functional check, not a security audit.
+It does not test the complete interactive CLI, deployment, key-storage policy,
+or statistical nonce collision resistance. No real credentials or user files were used.

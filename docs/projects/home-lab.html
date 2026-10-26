@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en" data-theme="midnight">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home lab and ThinkPad — Krzysztof Czarnecki</title>
+  <meta name="description" content="Personal Windows/Linux and VMware lab, Raspberry Pi 4 Model B with Pi-hole, and coreboot on a ThinkPad T440p.">
+  <link rel="icon" href="../assets/favicon-32.png?v=3268a8ee5b" sizes="32x32" type="image/png">
+  <link rel="icon" href="../assets/favicon.svg?v=c19265df07" type="image/svg+xml"><script src="../assets/theme.js?v=65c7694d4d"></script>
+<link rel="stylesheet" href="../assets/style.css?v=ed2ec233d8">
+<link rel="canonical" href="https://blackecki.github.io/portfolio/projects/home-lab.html">
+<link rel="alternate" type="application/ld+json" href="../profile.json" title="Profile data">
+<link rel="alternate" type="text/plain" href="../llms.txt" title="Profile summary">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Krzysztof Czarnecki">
+<meta property="og:title" content="Home lab and ThinkPad — Krzysztof Czarnecki">
+<meta property="og:description" content="Personal Windows/Linux and VMware lab, Raspberry Pi 4 Model B with Pi-hole, and coreboot on a ThinkPad T440p.">
+<meta property="og:url" content="https://blackecki.github.io/portfolio/projects/home-lab.html">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://blackecki.github.io/portfolio/#person",
+      "name": "Krzysztof Czarnecki",
+      "givenName": "Krzysztof",
+      "familyName": "Czarnecki",
+      "alternateName": "Blackecki",
+      "url": "https://blackecki.github.io/portfolio/about.html",
+      "description": "Junior IT Support candidate with INF.03, English C1 and hands-on Windows/Linux, VMware and Raspberry Pi experience. Public Python and web projects include implementation notes, source code and recorded Cryplab functional checks.",
+      "email": "mailto:krzysztof.c.tech@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pruszcz Gdański",
+        "addressCountry": "PL"
+      },
+      "sameAs": [
+        "https://github.com/Blackecki",
+        "https://www.linkedin.com/in/krzysztofczarnecki/"
+      ],
+      "knowsLanguage": [
+        "Polish",
+        "English (C1)"
+      ],
+      "knowsAbout": [
+        "Windows",
+        "Linux",
+        "VMware",
+        "Virtual machines",
+        "TCP/IP",
+        "DNS",
+        "DHCP",
+        "Python",
+        "SQL",
+        "Git",
+        "Pi-hole",
+        "coreboot",
+        "Phishing analysis"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Pomorskie Szkoły Rzemiosł"
+      },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "INF.03 — Creating and administering websites and databases",
+        "credentialCategory": "Vocational qualification"
+      },
+      "subjectOf": {
+        "@type": "DigitalDocument",
+        "name": "Krzysztof Czarnecki — Junior IT Support CV",
+        "url": "https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf",
+        "encodingFormat": "application/pdf"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://blackecki.github.io/portfolio/#website",
+      "url": "https://blackecki.github.io/portfolio/",
+      "name": "Krzysztof Czarnecki — IT Support Portfolio",
+      "publisher": {
+        "@id": "https://blackecki.github.io/portfolio/#person"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://blackecki.github.io/portfolio/projects/home-lab.html#webpage",
+      "url": "https://blackecki.github.io/portfolio/projects/home-lab.html",
+      "name": "Home lab and ThinkPad — Krzysztof Czarnecki",
+      "description": "Personal Windows/Linux and VMware lab, Raspberry Pi 4 Model B with Pi-hole, and coreboot on a ThinkPad T440p.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://blackecki.github.io/portfolio/#website"
+      },
+      "about": {
+        "@id": "https://blackecki.github.io/portfolio/#person"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="site">
+    <header class="masthead"><a class="wordmark" href="../index.html">Krzysztof Czarnecki</a><span class="site-label">cybersecurity portfolio</span><details class="theme-picker" data-theme-picker hidden>
+  <summary aria-label="Appearance settings"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor" stroke="none"/></svg><span>Appearance</span><span class="theme-current" data-theme-name>Midnight</span></summary>
+  <div class="theme-panel">
+    <div class="theme-panel-heading"><span>Appearance</span><button type="button" data-theme-close aria-label="Close appearance settings">×</button></div>
+    <fieldset><legend>Choose a theme</legend><div class="theme-options">
+<label class="theme-option"><input type="radio" name="theme" value="light" aria-label="Light"><span class="theme-option-body"><span class="theme-preview" data-preview="light" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Light<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Clean and bright</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="dark" aria-label="Dark"><span class="theme-option-body"><span class="theme-preview" data-preview="dark" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Dark<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Soft charcoal</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="paper" aria-label="Paper"><span class="theme-option-body"><span class="theme-preview" data-preview="paper" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Paper<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Warm and muted</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="midnight" aria-label="Midnight"><span class="theme-option-body"><span class="theme-preview" data-preview="midnight" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Midnight<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Deep navy</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="terminal" aria-label="Terminal"><span class="theme-option-body"><span class="theme-preview" data-preview="terminal" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Terminal<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Green monospace</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="system" aria-label="System"><span class="theme-option-body"><span class="theme-preview" data-preview="system" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">System<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Match your device</span></span></label>
+    </div></fieldset>
+    <p class="theme-footnote">Your choice is saved on this browser.</p>
+  </div>
+</details>
+</header>
+    <nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Projects</a><a href="../materials.html">Materials</a><a href="../about.html">About</a><a href="../assets/krzysztof-czarnecki-cv.pdf?v=c8f1e66d82">CV</a><a class="external" href="https://github.com/Blackecki">GitHub ↗</a></nav>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Project navigation"><section class="contents"><h2>On this page</h2><ul><li><a href="#scope">Work completed</a></li><li><a href="#relevance">IT support relevance</a></li><li><a href="#environment">Environment</a></li><li><a href="#evidence">Evidence and scope</a></li></ul></section><section><h2>Project context</h2><p>VMware · Pi-hole · coreboot</p><p><a href="https://github.com/merge/skulls">Source on GitHub ↗</a></p></section></aside>
+      <main id="main" class="article">
+        <p class="breadcrumb"><a href="../index.html#personal-projects">Personal projects</a> / Home lab and ThinkPad</p>
+        <h1>Home lab and ThinkPad</h1>
+        <div class="meta"><span>Personal learning project</span><span>VMware · Pi-hole · coreboot</span></div>
+        <p class="intro">My own equipment is a place to practise system setup, virtual machines, DNS services and firmware installation.</p>
+        <h2 id="scope">Work completed</h2>
+        <ul>
+          <li>A Raspberry Pi home lab with Pi-hole.</li>
+          <li>Windows and Linux virtual environments using VMware.</li>
+          <li>A coreboot installation on my ThinkPad, using a Raspberry Pi and the Skulls instructions.</li>
+        </ul>
+        <h2 id="relevance">Why this is relevant to IT support</h2>
+        <p>The useful experience is working with operating systems, network services and technical instructions on real equipment. The lab supports practice with system configuration and troubleshooting, while the firmware work involved following a hardware-specific installation procedure.</p>
+        <h2 id="environment">Environment</h2>
+        <div class="table-scroll"><table><thead><tr><th scope="col">Component</th><th scope="col">Setup</th></tr></thead><tbody>
+          <tr><td>Home lab</td><td>Raspberry Pi 4 Model B with Pi-hole</td></tr>
+          <tr><td>Virtualization</td><td>VMware; Windows and Linux environments</td></tr>
+          <tr><td>Firmware project</td><td>Lenovo ThinkPad T440p; coreboot via Skulls</td></tr>
+        </tbody></table></div>
+        <h2 id="evidence">Evidence and documentation scope</h2>
+        <p>This page records my setup and completed personal work. Configuration exports, screenshots and a step-by-step verification log are not published here. The linked project documentation explains the tools and installation process; it is a reference rather than proof of my individual setup.</p>
+        <p>The next useful addition is a short troubleshooting record showing a symptom, the checks performed and the outcome. That would make the practical work easier for another person to assess.</p>
+        <ul class="reading-list">
+          <li><a href="https://docs.pi-hole.net/">Pi-hole documentation ↗</a><span>Reference for the DNS filtering service</span></li>
+          <li><a href="https://github.com/merge/skulls/tree/master/t440p">Skulls for ThinkPad T440p ↗</a><span>Reference for the coreboot installation</span></li>
+        </ul>
+        <div class="next"><a href="../index.html#personal-projects">← All personal projects</a><a href="../about.html#contact">CV and contact →</a></div>
+      </main>
+    </div>
+    <footer class="footer"><span>Krzysztof Czarnecki · Portfolio</span><a href="https://github.com/Blackecki/portfolio">View on GitHub</a></footer>
+  </div>
+</body>
+</html>

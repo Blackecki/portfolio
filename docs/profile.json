@@ -7,7 +7,7 @@
   "familyName": "Czarnecki",
   "alternateName": "Blackecki",
   "url": "https://blackecki.github.io/portfolio/about.html",
-  "description": "Junior IT Support candidate and programming-track graduate with INF.03. Hands-on Windows/Linux, virtual machine and Raspberry Pi experience; personal Python and web application projects; cybersecurity coursework.",
+  "description": "Junior IT Support candidate with INF.03, English C1 and hands-on Windows/Linux, VMware and Raspberry Pi experience. Public Python and web projects include implementation notes, source code and recorded Cryplab functional checks.",
   "email": "mailto:krzysztof.c.tech@gmail.com",
   "address": {
     "@type": "PostalAddress",
@@ -25,6 +25,7 @@
   "knowsAbout": [
     "Windows",
     "Linux",
+    "VMware",
     "Virtual machines",
     "TCP/IP",
     "DNS",

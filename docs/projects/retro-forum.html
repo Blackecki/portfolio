@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en" data-theme="midnight">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retro Forum — Krzysztof Czarnecki</title>
+  <meta name="description" content="Retro Forum: a personal Next.js application with Prisma/SQLite, authentication, implementation evidence and learning notes.">
+  <link rel="icon" href="../assets/favicon-32.png?v=3268a8ee5b" sizes="32x32" type="image/png">
+  <link rel="icon" href="../assets/favicon.svg?v=c19265df07" type="image/svg+xml"><script src="../assets/theme.js?v=65c7694d4d"></script>
+<link rel="stylesheet" href="../assets/style.css?v=ed2ec233d8">
+<link rel="canonical" href="https://blackecki.github.io/portfolio/projects/retro-forum.html">
+<link rel="alternate" type="application/ld+json" href="../profile.json" title="Profile data">
+<link rel="alternate" type="text/plain" href="../llms.txt" title="Profile summary">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Krzysztof Czarnecki">
+<meta property="og:title" content="Retro Forum — Krzysztof Czarnecki">
+<meta property="og:description" content="Retro Forum: a personal Next.js application with Prisma/SQLite, authentication, implementation evidence and learning notes.">
+<meta property="og:url" content="https://blackecki.github.io/portfolio/projects/retro-forum.html">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://blackecki.github.io/portfolio/#person",
+      "name": "Krzysztof Czarnecki",
+      "givenName": "Krzysztof",
+      "familyName": "Czarnecki",
+      "alternateName": "Blackecki",
+      "url": "https://blackecki.github.io/portfolio/about.html",
+      "description": "Junior IT Support candidate with INF.03, English C1 and hands-on Windows/Linux, VMware and Raspberry Pi experience. Public Python and web projects include implementation notes, source code and recorded Cryplab functional checks.",
+      "email": "mailto:krzysztof.c.tech@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pruszcz Gdański",
+        "addressCountry": "PL"
+      },
+      "sameAs": [
+        "https://github.com/Blackecki",
+        "https://www.linkedin.com/in/krzysztofczarnecki/"
+      ],
+      "knowsLanguage": [
+        "Polish",
+        "English (C1)"
+      ],
+      "knowsAbout": [
+        "Windows",
+        "Linux",
+        "VMware",
+        "Virtual machines",
+        "TCP/IP",
+        "DNS",
+        "DHCP",
+        "Python",
+        "SQL",
+        "Git",
+        "Pi-hole",
+        "coreboot",
+        "Phishing analysis"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Pomorskie Szkoły Rzemiosł"
+      },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "INF.03 — Creating and administering websites and databases",
+        "credentialCategory": "Vocational qualification"
+      },
+      "subjectOf": {
+        "@type": "DigitalDocument",
+        "name": "Krzysztof Czarnecki — Junior IT Support CV",
+        "url": "https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf",
+        "encodingFormat": "application/pdf"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://blackecki.github.io/portfolio/#website",
+      "url": "https://blackecki.github.io/portfolio/",
+      "name": "Krzysztof Czarnecki — IT Support Portfolio",
+      "publisher": {
+        "@id": "https://blackecki.github.io/portfolio/#person"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://blackecki.github.io/portfolio/projects/retro-forum.html#webpage",
+      "url": "https://blackecki.github.io/portfolio/projects/retro-forum.html",
+      "name": "Retro Forum — Krzysztof Czarnecki",
+      "description": "Retro Forum: a personal Next.js application with Prisma/SQLite, authentication, implementation evidence and learning notes.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://blackecki.github.io/portfolio/#website"
+      },
+      "about": {
+        "@id": "https://blackecki.github.io/portfolio/#person"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="site">
+    <header class="masthead"><a class="wordmark" href="../index.html">Krzysztof Czarnecki</a><span class="site-label">cybersecurity portfolio</span><details class="theme-picker" data-theme-picker hidden>
+  <summary aria-label="Appearance settings"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor" stroke="none"/></svg><span>Appearance</span><span class="theme-current" data-theme-name>Midnight</span></summary>
+  <div class="theme-panel">
+    <div class="theme-panel-heading"><span>Appearance</span><button type="button" data-theme-close aria-label="Close appearance settings">×</button></div>
+    <fieldset><legend>Choose a theme</legend><div class="theme-options">
+<label class="theme-option"><input type="radio" name="theme" value="light" aria-label="Light"><span class="theme-option-body"><span class="theme-preview" data-preview="light" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Light<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Clean and bright</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="dark" aria-label="Dark"><span class="theme-option-body"><span class="theme-preview" data-preview="dark" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Dark<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Soft charcoal</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="paper" aria-label="Paper"><span class="theme-option-body"><span class="theme-preview" data-preview="paper" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Paper<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Warm and muted</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="midnight" aria-label="Midnight"><span class="theme-option-body"><span class="theme-preview" data-preview="midnight" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Midnight<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Deep navy</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="terminal" aria-label="Terminal"><span class="theme-option-body"><span class="theme-preview" data-preview="terminal" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Terminal<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Green monospace</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="system" aria-label="System"><span class="theme-option-body"><span class="theme-preview" data-preview="system" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">System<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Match your device</span></span></label>
+    </div></fieldset>
+    <p class="theme-footnote">Your choice is saved on this browser.</p>
+  </div>
+</details>
+</header>
+    <nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Projects</a><a href="../materials.html">Materials</a><a href="../about.html">About</a><a href="../assets/krzysztof-czarnecki-cv.pdf?v=c8f1e66d82">CV</a><a class="external" href="https://github.com/Blackecki">GitHub ↗</a></nav>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Project navigation"><section class="contents"><h2>On this page</h2><ul><li><a href="#goal">Goal and contribution</a></li><li><a href="#challenge">Prisma challenge</a></li><li><a href="#implementation">Implementation</a></li><li><a href="#verification">Verification scope</a></li><li><a href="#tradeoffs">Trade-offs</a></li><li><a href="#evidence">Evidence</a></li></ul></section><section><h2>Project context</h2><p>Next.js · Prisma · SQLite</p><p><a href="https://github.com/Blackecki/retro-forum">Source on GitHub ↗</a></p></section></aside>
+      <main id="main" class="article">
+        <p class="breadcrumb"><a href="../index.html#personal-projects">Personal projects</a> / Retro Forum</p>
+        <h1>Retro Forum</h1>
+        <div class="meta"><span>Personal learning project</span><span>Next.js · Prisma · SQLite</span></div>
+        <p class="intro">A forum project for learning how web application features, database access and authentication fit together.</p>
+        <p><a href="https://github.com/Blackecki/retro-forum">Source code and setup instructions ↗</a></p>
+        <h2 id="goal">Goal and contribution</h2>
+        <p>I developed the forum as a personal web application project, working with Next.js, Prisma and SQLite. The learning focus is understanding the relationship between the application, its data layer, authenticated users and administrative actions.</p>
+        <h2 id="challenge">A practical challenge</h2>
+        <p>This was my first experience with Prisma. Initial database integration caused a problem that I worked through with AI assistance. The useful learning topic was the database workflow and its connection to the application.</p>
+        <h2 id="implementation">Implementation overview</h2>
+        <div class="table-scroll"><table><thead><tr><th scope="col">Area</th><th scope="col">Implementation visible in the repository</th></tr></thead><tbody>
+          <tr><td>Data layer</td><td>Prisma with SQLite for application data.</td></tr>
+          <tr><td>Authentication</td><td>bcrypt password checks and signed JWT sessions stored in cookies.</td></tr>
+          <tr><td>Login attempt handling</td><td>Per-IP request limits and per-account failed-attempt tracking.</td></tr>
+          <tr><td>Current user lookup</td><td>User and role information is read from the database when resolving the current user.</td></tr>
+        </tbody></table></div>
+        <h2 id="verification">Evidence and verification scope</h2>
+        <p>The evidence for this write-up is the public source and README at <a href="https://github.com/Blackecki/retro-forum/tree/c04b6df448d04fa18fa750ef0a91c1d1dd2046c2">commit c04b6df</a>. The implementation was inspected for this summary. A runtime test report and public deployment are not included.</p>
+        <p>Before treating the application as deployment-ready, the useful checks are successful and failed login, rate-limit responses, unauthorized administrative access, logout and session behaviour. These are proposed checks rather than recorded passing results.</p>
+        <h2 id="tradeoffs">Trade-offs and next steps</h2>
+        <p>The repository documents in-memory IP rate limits. A deployment across multiple application instances would need shared enforcement. Automated smoke tests and a reproducible note about the Prisma issue would make future changes easier to verify.</p>
+        <p>This project demonstrates work with a database-backed application and authentication code. A production security review is a separate activity.</p>
+        <h2 id="evidence">Implementation evidence</h2>
+        <ul class="reading-list">
+          <li><a href="https://github.com/Blackecki/retro-forum/blob/c04b6df448d04fa18fa750ef0a91c1d1dd2046c2/app/api/auth/login/route.ts">Login request handling ↗</a><span>Password checks, attempt limits and session cookie creation</span></li>
+          <li><a href="https://github.com/Blackecki/retro-forum/blob/c04b6df448d04fa18fa750ef0a91c1d1dd2046c2/lib/auth.ts">Authentication helpers ↗</a><span>Token verification and current-user lookup</span></li>
+          <li><a href="https://github.com/Blackecki/retro-forum#readme">Project README ↗</a><span>Setup, environment variables and documented trade-offs</span></li>
+        </ul>
+        <div class="next"><a href="../index.html#personal-projects">← All personal projects</a><a href="../about.html#contact">CV and contact →</a></div>
+      </main>
+    </div>
+    <footer class="footer"><span>Krzysztof Czarnecki · Portfolio</span><a href="https://github.com/Blackecki/portfolio">View on GitHub</a></footer>
+  </div>
+</body>
+</html>

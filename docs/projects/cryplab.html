@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en" data-theme="midnight">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cryplab — Krzysztof Czarnecki</title>
+  <meta name="description" content="Cryplab: a Python cryptography learning project with source code, implementation notes and nine recorded functional checks.">
+  <link rel="icon" href="../assets/favicon-32.png?v=3268a8ee5b" sizes="32x32" type="image/png">
+  <link rel="icon" href="../assets/favicon.svg?v=c19265df07" type="image/svg+xml"><script src="../assets/theme.js?v=65c7694d4d"></script>
+<link rel="stylesheet" href="../assets/style.css?v=ed2ec233d8">
+<link rel="canonical" href="https://blackecki.github.io/portfolio/projects/cryplab.html">
+<link rel="alternate" type="application/ld+json" href="../profile.json" title="Profile data">
+<link rel="alternate" type="text/plain" href="../llms.txt" title="Profile summary">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Krzysztof Czarnecki">
+<meta property="og:title" content="Cryplab — Krzysztof Czarnecki">
+<meta property="og:description" content="Cryplab: a Python cryptography learning project with source code, implementation notes and nine recorded functional checks.">
+<meta property="og:url" content="https://blackecki.github.io/portfolio/projects/cryplab.html">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://blackecki.github.io/portfolio/#person",
+      "name": "Krzysztof Czarnecki",
+      "givenName": "Krzysztof",
+      "familyName": "Czarnecki",
+      "alternateName": "Blackecki",
+      "url": "https://blackecki.github.io/portfolio/about.html",
+      "description": "Junior IT Support candidate with INF.03, English C1 and hands-on Windows/Linux, VMware and Raspberry Pi experience. Public Python and web projects include implementation notes, source code and recorded Cryplab functional checks.",
+      "email": "mailto:krzysztof.c.tech@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pruszcz Gdański",
+        "addressCountry": "PL"
+      },
+      "sameAs": [
+        "https://github.com/Blackecki",
+        "https://www.linkedin.com/in/krzysztofczarnecki/"
+      ],
+      "knowsLanguage": [
+        "Polish",
+        "English (C1)"
+      ],
+      "knowsAbout": [
+        "Windows",
+        "Linux",
+        "VMware",
+        "Virtual machines",
+        "TCP/IP",
+        "DNS",
+        "DHCP",
+        "Python",
+        "SQL",
+        "Git",
+        "Pi-hole",
+        "coreboot",
+        "Phishing analysis"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Pomorskie Szkoły Rzemiosł"
+      },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "INF.03 — Creating and administering websites and databases",
+        "credentialCategory": "Vocational qualification"
+      },
+      "subjectOf": {
+        "@type": "DigitalDocument",
+        "name": "Krzysztof Czarnecki — Junior IT Support CV",
+        "url": "https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf",
+        "encodingFormat": "application/pdf"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://blackecki.github.io/portfolio/#website",
+      "url": "https://blackecki.github.io/portfolio/",
+      "name": "Krzysztof Czarnecki — IT Support Portfolio",
+      "publisher": {
+        "@id": "https://blackecki.github.io/portfolio/#person"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://blackecki.github.io/portfolio/projects/cryplab.html#webpage",
+      "url": "https://blackecki.github.io/portfolio/projects/cryplab.html",
+      "name": "Cryplab — Krzysztof Czarnecki",
+      "description": "Cryplab: a Python cryptography learning project with source code, implementation notes and nine recorded functional checks.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://blackecki.github.io/portfolio/#website"
+      },
+      "about": {
+        "@id": "https://blackecki.github.io/portfolio/#person"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="site">
+    <header class="masthead"><a class="wordmark" href="../index.html">Krzysztof Czarnecki</a><span class="site-label">cybersecurity portfolio</span><details class="theme-picker" data-theme-picker hidden>
+  <summary aria-label="Appearance settings"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor" stroke="none"/></svg><span>Appearance</span><span class="theme-current" data-theme-name>Midnight</span></summary>
+  <div class="theme-panel">
+    <div class="theme-panel-heading"><span>Appearance</span><button type="button" data-theme-close aria-label="Close appearance settings">×</button></div>
+    <fieldset><legend>Choose a theme</legend><div class="theme-options">
+<label class="theme-option"><input type="radio" name="theme" value="light" aria-label="Light"><span class="theme-option-body"><span class="theme-preview" data-preview="light" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Light<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Clean and bright</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="dark" aria-label="Dark"><span class="theme-option-body"><span class="theme-preview" data-preview="dark" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Dark<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Soft charcoal</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="paper" aria-label="Paper"><span class="theme-option-body"><span class="theme-preview" data-preview="paper" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Paper<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Warm and muted</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="midnight" aria-label="Midnight"><span class="theme-option-body"><span class="theme-preview" data-preview="midnight" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Midnight<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Deep navy</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="terminal" aria-label="Terminal"><span class="theme-option-body"><span class="theme-preview" data-preview="terminal" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Terminal<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Green monospace</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="system" aria-label="System"><span class="theme-option-body"><span class="theme-preview" data-preview="system" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">System<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Match your device</span></span></label>
+    </div></fieldset>
+    <p class="theme-footnote">Your choice is saved on this browser.</p>
+  </div>
+</details>
+</header>
+    <nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Projects</a><a href="../materials.html">Materials</a><a href="../about.html">About</a><a href="../assets/krzysztof-czarnecki-cv.pdf?v=c8f1e66d82">CV</a><a class="external" href="https://github.com/Blackecki">GitHub ↗</a></nav>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Project navigation"><section class="contents"><h2>On this page</h2><ul><li><a href="#goal">Goal and contribution</a></li><li><a href="#implementation">Implementation</a></li><li><a href="#verification">Verification</a></li><li><a href="#decisions">Decisions</a></li><li><a href="#evidence">Evidence</a></li></ul></section><section><h2>Project context</h2><p>Python · Hashing · AES-GCM</p><p><a href="https://github.com/Blackecki/Cryplab">Source on GitHub ↗</a></p></section></aside>
+      <main id="main" class="article">
+        <p class="breadcrumb"><a href="../index.html#personal-projects">Personal projects</a> / Cryplab</p>
+        <h1>Cryplab</h1>
+        <div class="meta"><span>Personal learning project</span><span>Python · Hashing · AES-GCM</span></div>
+        <p class="intro">A Python command-line project for understanding hashing and authenticated encryption through small, working features.</p>
+        <p><a href="https://github.com/Blackecki/Cryplab">Source code ↗</a> · <a href="../assets/cryplab-verification.txt?v=2a96d7a97e">Functional verification report ↗</a></p>
+        <h2 id="goal">Goal and contribution</h2>
+        <p>I built Cryplab to move from reading about cryptography to using the libraries correctly. My main learning challenge was understanding the library interfaces and how to connect them to a command-line workflow. I worked through this using documentation and online resources.</p>
+        <p>The project uses Python's <code>hashlib</code> and the <code>cryptography</code> library. The encryption algorithm is provided by the library; my implementation handles the surrounding workflow, encoding, inputs and outputs.</p>
+        <h2 id="implementation">What is implemented</h2>
+        <ul>
+          <li><strong>Text hashing:</strong> UTF-8 input and a SHA-256 hexadecimal digest.</li>
+          <li><strong>File hashing:</strong> binary files are read in chunks rather than loaded entirely into memory.</li>
+          <li><strong>Authenticated encryption:</strong> AES-256-GCM, a generated 32-byte key and a fresh 12-byte nonce per encryption call.</li>
+          <li><strong>Command-line workflow:</strong> menu actions for text hashing, file hashing and text encryption, with Base64 output and key export.</li>
+        </ul>
+        <h2 id="verification">Recorded verification</h2>
+        <p>Nine functional checks passed against <a href="https://github.com/Blackecki/Cryplab/tree/b56f464fe9b16eae49bf57ee680993d185a3356d">commit b56f464</a>. The checks exercise the hashing and encryption functions directly.</p>
+        <div class="table-scroll"><table><thead><tr><th scope="col">Area</th><th scope="col">Checks and result</th></tr></thead><tbody>
+          <tr><td>SHA-256</td><td>Known answers for <code>abc</code> and empty text; a file larger than the read buffer compared with a standard-library digest. All passed.</td></tr>
+          <tr><td>AES-GCM</td><td>Key length, Unicode and empty-text round trips, rejection of a wrong key and modified ciphertext. All passed.</td></tr>
+          <tr><td>Key representation</td><td>Base64 export/import preserved the key. Passed.</td></tr>
+        </tbody></table></div>
+        <p>The <a href="../assets/cryplab-verification.txt?v=2a96d7a97e">verification record</a> identifies the source revision, runtime, checks and limits. This covers core function behaviour; the complete interactive CLI and production key handling require separate checks.</p>
+        <h2 id="decisions">Decisions and next steps</h2>
+        <p>Using a maintained cryptography library keeps algorithm implementation separate from application code. Chunked reads suit file hashing without requiring the entire file in memory. Base64 makes binary output transferable as text; it does not protect a key.</p>
+        <p>The next improvements are repeatable automated tests in the project repository, a dependency file and clearer key-handling documentation.</p>
+        <details><summary>Run the CLI locally</summary><p>From a local development environment:</p><pre class="code-block"><code>git clone https://github.com/Blackecki/Cryplab.git
+cd Cryplab
+python -m pip install cryptography
+python main.py</code></pre><p>The recorded verification tests the library functions rather than every menu interaction.</p></details>
+        <h2 id="evidence">Implementation evidence</h2>
+        <ul class="reading-list">
+          <li><a href="https://github.com/Blackecki/Cryplab/blob/b56f464fe9b16eae49bf57ee680993d185a3356d/cryp/hashing.py">Hashing implementation ↗</a><span>Text and streamed file hashing</span></li>
+          <li><a href="https://github.com/Blackecki/Cryplab/blob/b56f464fe9b16eae49bf57ee680993d185a3356d/cryp/encryption.py">Encryption and encoding implementation ↗</a><span>AES-GCM functions, nonce generation and Base64 conversion</span></li>
+          <li><a href="https://github.com/Blackecki/Cryplab/blob/b56f464fe9b16eae49bf57ee680993d185a3356d/main.py">Application entry point ↗</a><span>Menu-based workflow</span></li>
+        </ul>
+        <div class="next"><a href="../index.html#personal-projects">← All personal projects</a><a href="../about.html#contact">CV and contact →</a></div>
+      </main>
+    </div>
+    <footer class="footer"><span>Krzysztof Czarnecki · Portfolio</span><a href="https://github.com/Blackecki/portfolio">View on GitHub</a></footer>
+  </div>
+</body>
+</html>

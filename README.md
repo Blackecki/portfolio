@@ -8,11 +8,11 @@ This repository contains the portfolio website, its source files and the origina
 
 ## Personal projects
 
-| Project | Focus |
-| --- | --- |
-| [Cryplab](https://github.com/Blackecki/Cryplab) | Python command-line tool with SHA-256 text and file hashing, AES-GCM text encryption and key export. |
-| [Retro Forum](https://github.com/Blackecki/retro-forum) | Next.js application with Prisma/SQLite, JWT sessions, bcrypt password checks and login attempt limits. |
-| [Home lab and ThinkPad firmware](https://blackecki.github.io/portfolio/about.html#practical-work) | Raspberry Pi with Pi-hole, Windows/Linux virtual machines, and a coreboot installation following the Skulls documentation. |
+| Project | Focus | Evidence |
+| --- | --- | --- |
+| [Cryplab](https://blackecki.github.io/portfolio/projects/cryplab.html) | Python tool with SHA-256 text/file hashing, AES-GCM text encryption and key export. | [Source](https://github.com/Blackecki/Cryplab) · [9 functional checks](https://blackecki.github.io/portfolio/assets/cryplab-verification.txt) |
+| [Retro Forum](https://blackecki.github.io/portfolio/projects/retro-forum.html) | Next.js application with Prisma/SQLite, JWT sessions, bcrypt password checks and login attempt limits. | [Source and setup](https://github.com/Blackecki/retro-forum) |
+| [Home lab and ThinkPad firmware](https://blackecki.github.io/portfolio/projects/home-lab.html) | Pi-hole, Windows/Linux virtual machines in VMware, and a coreboot installation following the Skulls documentation. | Setup overview and technical references |
 
 ## Cybersecurity case studies
 
