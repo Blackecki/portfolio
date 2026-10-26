@@ -93,6 +93,7 @@ a:focus-visible, summary:focus-visible, button:focus-visible { outline: 2px soli
 .sidebar h2 { margin: 0 0 9px; font-size: 13px; }
 .sidebar p { margin: 0 0 7px; }
 .sidebar section + section { margin-top: 26px; }
+.sidebar section + nav, .sidebar nav + section { margin-top: 26px; }
 .sidebar ul { margin: 0; padding: 0; list-style: none; }
 .sidebar li { margin: 5px 0; }
 .sidebar a { text-decoration: none; }
@@ -118,6 +119,21 @@ p { margin: 0 0 14px; }
 .eyebrow { color: var(--muted); font-size: 12px; margin-bottom: 9px; }
 .project-kind { font-size: 11px; color: var(--muted); margin-bottom: 5px; }
 .section-heading { margin-top: 36px; }
+.portfolio-intro { padding: 25px; background: var(--soft); border: 1px solid var(--line); border-radius: 4px; }
+.portfolio-intro .eyebrow { margin-bottom: 10px; }
+.portfolio-intro h1 { font-size: 29px; }
+.portfolio-intro .intro { margin-bottom: 0; }
+.section-jumps { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; margin-top: 23px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; }
+.section-jumps > span { color: var(--muted); }
+.portfolio-section { margin-top: 36px; border: 1px solid var(--line); border-radius: 4px; }
+.portfolio-section > .section-heading { display: block; margin: 0; padding: 20px 22px; background: var(--wash); border-bottom: 1px solid var(--line); border-left: 4px solid var(--link); border-radius: 3px 3px 0 0; }
+.portfolio-section > .section-heading h2 { font-size: 21px; font-weight: 700; }
+.portfolio-section > .section-heading span { display: block; margin-top: 6px; font-size: 13px; }
+.portfolio-section > .project { padding: 21px 25px; }
+.portfolio-section > .project:last-of-type { border-bottom: 0; }
+.section-footnote { padding: 16px 25px; background: var(--soft); border-top: 1px solid var(--line); border-radius: 0 0 3px 3px; font-size: 12px; color: var(--muted); }
+.section-footnote p { margin: 0; }
+.section-footnote .text-link { margin-top: 7px; }
 .project h3 { margin: 0 0 5px; font-size: 17px; font-weight: 600; }
 .project h3 a { text-decoration: none; }
 .project h3 a:hover { text-decoration: underline; }
@@ -165,6 +181,14 @@ details p { margin: 12px 0 0; font-size: 13px; }
   .sidebar section + section { margin-top: 0; }
   .sidebar .contents { grid-column: 1 / -1; }
   main { padding: 25px 20px 29px; }
+  .home-main { padding: 20px 14px 28px; }
+  .portfolio-intro { padding: 20px 17px; }
+  .portfolio-intro h1 { font-size: 25px; }
+  .portfolio-section { margin-top: 28px; }
+  .portfolio-section > .section-heading { padding: 18px 16px; }
+  .portfolio-section > .section-heading h2 { font-size: 20px; }
+  .portfolio-section > .project { padding: 20px 17px; }
+  .section-footnote { padding: 16px 17px; }
   h1 { font-size: 25px; }
   .footer { padding: 13px 20px; flex-wrap: wrap; }
 }
@@ -190,4 +214,7 @@ details p { margin: 12px 0 0; font-size: 13px; }
   h2, h3 { break-after: avoid; }
   tr { break-inside: avoid; }
   .table-scroll { overflow: visible; }
+  .portfolio-intro, .portfolio-section { border-color: #aaa; }
+  .portfolio-section > .section-heading { break-after: avoid; }
+  .section-jumps { display: none; }
 }
