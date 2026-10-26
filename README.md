@@ -30,23 +30,13 @@ The site uses static HTML, CSS and a small amount of JavaScript, hosted on GitHu
 
 | Path | Contents |
 | --- | --- |
-| `site/` | Page templates, shared components and profile data. |
-| `docs/` | Published website and assets. |
-| `tools/` | Site generation, CV generation and validation scripts. |
+| `docs/` | Website source: HTML, CSS, JavaScript, CV and public profile data. |
 | `brand/` | Blackecki vector logo, transparent PNG exports, profile icon and identity kit. |
 | Repository root | Original coursework reports and worksheets. |
 
-## Local development
+## Website source
 
-Building and checking the website requires Python 3.9 or later, using only the standard library.
-
-```sh
-python tools/build_site.py
-python tools/check_site.py
-python -m http.server 8765 --bind 127.0.0.1 --directory docs
-```
-
-Open [localhost:8765](http://127.0.0.1:8765/) to preview the site. The separate CV generator, `tools/build_cv.py`, requires ReportLab and the Windows Arial fonts.
+The website is served directly from `docs/` on the `main` branch through GitHub Pages. It has no build step or package dependencies. Its HTML, stylesheets and scripts can be inspected directly in this repository.
 
 ## Contact
 

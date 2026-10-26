@@ -24,4 +24,4 @@ Każda wersja jest dostępna jako SVG oraz PNG. Pełne logo w PNG ma szerokość
 
 Symbol B jest własną konstrukcją geometryczną. Napis opiera się na kroju Bahnschrift o wadze 600, z indywidualnym dopasowaniem odstępów i konwersją do krzywych. Kolory: granat `#17233A`, niebieski `#4169A5`, jasny niebieski `#B4C7FF`.
 
-Dołączone źródła: `tools/build_logo.py`, `tools/render_logo.cjs` i `tools/preview_logo.py`. Odtworzenie eksportów wymaga Pythona z fonttools i Pillow, Node.js z Sharp oraz zainstalowanego kroju Bahnschrift. Font nie jest potrzebny do korzystania z gotowych SVG i PNG.
+Pliki SVG zawierają kompletną geometrię znaku i napisu. Można je edytować w aplikacji wektorowej bez instalowania fontów ani dodatkowych narzędzi.
