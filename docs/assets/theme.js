@@ -30,7 +30,7 @@
     const currentName = picker.querySelector('[data-theme-name]');
     function syncControls() {
       choices.forEach(choice => { choice.checked = choice.value === preference; });
-      currentName.textContent = preference.charAt(0).toUpperCase() + preference.slice(1);
+      currentName.textContent = choices.find(choice => choice.value === preference).getAttribute('aria-label');
     }
     function closePanel(restoreFocus = false) {
       picker.open = false;

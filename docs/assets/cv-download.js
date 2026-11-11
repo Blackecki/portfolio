@@ -1,5 +1,22 @@
 /* Only the explicit language download links use this; other CV links remain previews. */
 document.addEventListener('DOMContentLoaded', () => {
+  const messages = document.documentElement.lang === 'pl' ? {
+    preparing: 'Przygotowuję plik…',
+    preparingHint: 'Przygotowywanie pliku',
+    success: 'Pobieranie rozpoczęte. Sprawdź pobrane pliki w przeglądarce.',
+    successHint: 'Pobieranie rozpoczęte',
+    idleHint: 'Pobierz PDF',
+    error: 'Nie udało się pobrać CV. Spróbuj ponownie.',
+    errorHint: 'Błąd pobierania. Kliknij ponownie.'
+  } : {
+    preparing: 'Preparing your download…',
+    preparingHint: 'Preparing download',
+    success: 'Download requested. Check your browser’s downloads.',
+    successHint: 'Download requested',
+    idleHint: 'Download PDF',
+    error: 'Could not download the CV. Please try again.',
+    errorHint: 'Download failed. Click the link to try again.'
+  };
   document.querySelectorAll('[data-cv-download-row]').forEach(row => {
     const link = row.querySelector('[data-cv-download]');
     const status = row.querySelector('[data-download-status]');
@@ -20,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       clearTimeout(resetTimer);
       link.setAttribute('aria-disabled', 'true');
       link.setAttribute('aria-busy', 'true');
-      feedback('loading', 'Preparing your download…', 'Preparing download');
+      feedback('loading', messages.preparing, messages.preparingHint);
       try {
         const response = await fetch(link.href, { credentials: 'same-origin' });
         if (!response.ok) throw new Error('PDF unavailable');
@@ -37,10 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
         save.click();
         save.remove();
         setTimeout(() => URL.revokeObjectURL(url), 30000);
-        feedback('success', 'Download requested. Check your browser’s downloads.', 'Download requested');
-        resetTimer = setTimeout(() => feedback('idle', '', 'Download PDF'), 4000);
+        feedback('success', messages.success, messages.successHint);
+        resetTimer = setTimeout(() => feedback('idle', '', messages.idleHint), 4000);
       } catch (_) {
-        feedback('error', 'Could not download the CV. Please try again.', 'Download failed. Click the link to try again.');
+        feedback('error', messages.error, messages.errorHint);
       } finally {
         busy = false;
         link.removeAttribute('aria-disabled');

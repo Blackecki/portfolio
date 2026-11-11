@@ -2,7 +2,7 @@
 
 I'm looking for Junior IT Support, Service Desk L1 or helpdesk work in the Tricity area. I have INF.03, English C1, two IT internships and retail experience. This repository contains my portfolio and cybersecurity coursework.
 
-[Portfolio](https://blackecki.github.io/portfolio/) · [English CV](https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf) · [CV po polsku](https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv-pl.pdf) · [LinkedIn](https://www.linkedin.com/in/krzysztofczarnecki/)
+[Portfolio in English](https://blackecki.github.io/portfolio/) · [Portfolio po polsku](https://blackecki.github.io/portfolio/pl/) · [English CV](https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf) · [CV po polsku](https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv-pl.pdf) · [LinkedIn](https://www.linkedin.com/in/krzysztofczarnecki/)
 
 ## Projects
 
@@ -24,7 +24,7 @@ These are Google Cybersecurity exercises. The [materials page](https://blackecki
 
 ## Site
 
-GitHub Pages serves the HTML, CSS and JavaScript in `docs/`. The site has selectable themes and English/Polish CV downloads. Logo files are in `brand/`.
+GitHub Pages serves the HTML, CSS and JavaScript in `docs/`. Every page is available in English and Polish, with a language switch, selectable themes and CV downloads in both languages. Logo files are in `brand/`.
 
 ## Contact
 

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pl" data-theme="midnight">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atak SYN flood — Krzysztof Czarnecki</title>
+  <meta name="description" content="Ćwiczenie Google Cybersecurity o niepełnych połączeniach TCP, scenariuszu SYN flood i dalszej diagnostyce.">
+  <link rel="icon" href="../../assets/favicon-32.png?v=3268a8ee5b" sizes="32x32" type="image/png">
+  <link rel="icon" href="../../assets/favicon.svg?v=c19265df07" type="image/svg+xml"><script src="../../assets/theme.js?v=432ef24d2e"></script>
+<script src="../../assets/language.js?v=10a99ffe23"></script>
+<link rel="stylesheet" href="../../assets/style.css?v=2cec6bcc6a">
+<link rel="canonical" href="https://blackecki.github.io/portfolio/pl/projects/syn-flood.html">
+<link rel="alternate" hreflang="en" href="https://blackecki.github.io/portfolio/projects/syn-flood.html">
+<link rel="alternate" hreflang="pl" href="https://blackecki.github.io/portfolio/pl/projects/syn-flood.html">
+<link rel="alternate" hreflang="x-default" href="https://blackecki.github.io/portfolio/projects/syn-flood.html">
+<link rel="alternate" type="application/ld+json" href="../../profile.json" title="Dane profilu">
+<link rel="alternate" type="text/plain" href="../../llms.txt" title="Opis profilu">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Krzysztof Czarnecki">
+<meta property="og:title" content="Atak SYN flood — Krzysztof Czarnecki">
+<meta property="og:description" content="Ćwiczenie Google Cybersecurity o niepełnych połączeniach TCP, scenariuszu SYN flood i dalszej diagnostyce.">
+<meta property="og:url" content="https://blackecki.github.io/portfolio/pl/projects/syn-flood.html">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://blackecki.github.io/portfolio/#person",
+      "name": "Krzysztof Czarnecki",
+      "givenName": "Krzysztof",
+      "familyName": "Czarnecki",
+      "alternateName": "Blackecki",
+      "url": "https://blackecki.github.io/portfolio/about.html",
+      "description": "Krzysztof Czarnecki szuka pracy w IT Support lub Service Desk w Trójmieście. INF.03, angielski C1, dwie praktyki IT, praca w sklepie, własne laboratorium Windows/Linux oraz projekty w Pythonie i Bashu.",
+      "email": "mailto:krzysztof.c.tech@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pruszcz Gdański",
+        "addressCountry": "PL"
+      },
+      "sameAs": [
+        "https://github.com/Blackecki",
+        "https://www.linkedin.com/in/krzysztofczarnecki/"
+      ],
+      "knowsLanguage": [
+        "Polish",
+        "English (C1)"
+      ],
+      "knowsAbout": [
+        "Windows",
+        "Linux",
+        "Ubuntu",
+        "Qubes OS",
+        "VMware",
+        "Virtual machines",
+        "SSH",
+        "Linux web services",
+        "TCP/IP",
+        "DNS",
+        "DHCP",
+        "HTTP/HTTPS",
+        "LAN",
+        "Python",
+        "Bash",
+        "SQL fundamentals",
+        "C# fundamentals",
+        "Git",
+        "Pi-hole",
+        "coreboot",
+        "Backups",
+        "Wireshark",
+        "tcpdump",
+        "VirusTotal",
+        "Phishing analysis"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Pomorskie Szkoły Rzemiosł"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "INF.03 — Creating and administering websites and databases",
+          "credentialCategory": "Vocational qualification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Tools of the Trade: Linux and SQL",
+          "credentialCategory": "Course completion",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Google"
+          }
+        }
+      ],
+      "subjectOf": [
+        {
+          "@type": "DigitalDocument",
+          "name": "Krzysztof Czarnecki — CV (English)",
+          "url": "https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf",
+          "encodingFormat": "application/pdf",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "DigitalDocument",
+          "name": "Krzysztof Czarnecki — CV (Polish)",
+          "url": "https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv-pl.pdf",
+          "encodingFormat": "application/pdf",
+          "inLanguage": "pl"
+        }
+      ],
+      "telephone": "+48 791 662 699"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://blackecki.github.io/portfolio/#website",
+      "url": "https://blackecki.github.io/portfolio/",
+      "name": "Krzysztof Czarnecki — Portfolio",
+      "inLanguage": [
+        "en",
+        "pl"
+      ],
+      "publisher": {
+        "@id": "https://blackecki.github.io/portfolio/#person"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://blackecki.github.io/portfolio/pl/projects/syn-flood.html#webpage",
+      "url": "https://blackecki.github.io/portfolio/pl/projects/syn-flood.html",
+      "name": "Atak SYN flood — Krzysztof Czarnecki",
+      "description": "Ćwiczenie Google Cybersecurity o niepełnych połączeniach TCP, scenariuszu SYN flood i dalszej diagnostyce.",
+      "inLanguage": "pl",
+      "isPartOf": {
+        "@id": "https://blackecki.github.io/portfolio/#website"
+      },
+      "about": {
+        "@id": "https://blackecki.github.io/portfolio/#person"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <a class="skip" href="#main">Przejdź do treści</a>
+  <div class="site">
+    <header class="masthead"><a class="wordmark" href="../index.html">Krzysztof Czarnecki</a><span class="site-label">IT i cyberbezpieczeństwo</span><div class="header-controls"><nav class="language-switch" aria-label="Język strony"><a href="../../projects/syn-flood.html" lang="en" hreflang="en" data-language-switch="en" aria-label="English">EN</a><a href="syn-flood.html" lang="pl" hreflang="pl" data-language-switch="pl" aria-label="Polski" aria-current="true">PL</a></nav><details class="theme-picker" data-theme-picker hidden>
+  <summary aria-label="Wybór motywu"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor" stroke="none"/></svg><span>Motyw</span><span class="theme-current" data-theme-name>Midnight</span></summary>
+  <div class="theme-panel">
+    <div class="theme-panel-heading"><span>Motyw</span><button type="button" data-theme-close aria-label="Zamknij wybór motywu">×</button></div>
+    <fieldset><legend>Wybierz motyw</legend><div class="theme-options">
+<label class="theme-option"><input type="radio" name="theme" value="light" aria-label="Jasny"><span class="theme-option-body"><span class="theme-preview" data-preview="light" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Jasny<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Jasne tło</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="dark" aria-label="Ciemny"><span class="theme-option-body"><span class="theme-preview" data-preview="dark" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Ciemny<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Ciemna szarość</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="paper" aria-label="Papier"><span class="theme-option-body"><span class="theme-preview" data-preview="paper" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Papier<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Ciepłe kolory</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="midnight" aria-label="Midnight"><span class="theme-option-body"><span class="theme-preview" data-preview="midnight" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Midnight<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Głęboki granat</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="terminal" aria-label="Terminal"><span class="theme-option-body"><span class="theme-preview" data-preview="terminal" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Terminal<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Zieleń i terminal</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="system" aria-label="System"><span class="theme-option-body"><span class="theme-preview" data-preview="system" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">System<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Jak w systemie</span></span></label>
+    </div></fieldset>
+    <p class="theme-footnote">Wybór jest zapisywany w tej przeglądarce.</p>
+  </div>
+</details>
+</div></header>
+    <nav class="main-nav" aria-label="Nawigacja główna"><a href="../index.html">Projekty</a><a href="../materials.html">Materiały</a><a href="../about.html">O mnie</a><a href="../../assets/krzysztof-czarnecki-cv-pl.pdf?v=332a25ba8d">CV</a><a class="external" href="https://github.com/Blackecki">GitHub ↗</a></nav>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Nawigacja analizy"><section class="contents"><h2>Na tej stronie</h2><ul><li><a href="#summary">Opis ruchu</a></li><li><a href="#mechanism">Połączenie TCP</a></li><li><a href="#verification">Co sprawdzić</a></li><li><a href="#response">Możliwa reakcja</a></li><li><a href="#sources">Źródła</a></li></ul></section><section><h2>Kontekst</h2><p>Google Cybersecurity Certificate</p><p class="muted">Ćwiczenie z kursu<br>TCP · Odmowa dostępu do usługi</p></section></aside>
+      <main id="main" class="article">
+        <p class="breadcrumb"><a href="../index.html#case-notes">Analizy incydentów</a> / SYN flood</p>
+        <h1>Analiza ataku SYN flood</h1>
+        <div class="meta"><span>Ćwiczenie z kursu Google</span><span>TCP · Dokumentacja incydentu</span></div>
+        <p class="intro">Strona przestaje działać, a serwer otrzymuje wiele żądań połączeń TCP, które nie zostają ukończone.</p>
+        <h2 id="summary">Opis ruchu</h2>
+        <p>Raport opisuje pakiety SYN z <code>203.0.113.0</code> do <code>192.0.2.1</code>, odpowiedzi SYN-ACK i brak końcowych ACK. Pasuje to do scenariusza SYN flood przedstawionego w kursie.</p>
+        <h2 id="mechanism">Niepełne połączenie TCP</h2>
+        <div class="table-scroll"><table>
+          <thead><tr><th scope="col">Pakiet</th><th scope="col">Zwykłe połączenie</th><th scope="col">Opisany ruch</th></tr></thead>
+          <tbody>
+            <tr><td>SYN</td><td>Klient żąda połączenia.</td><td>Napływa wiele żądań.</td></tr>
+            <tr><td>SYN-ACK</td><td>Serwer odpowiada.</td><td>Serwer wysyła odpowiedzi.</td></tr>
+            <tr><td>ACK</td><td>Klient kończy nawiązywanie połączenia.</td><td>Brakuje końcowych potwierdzeń.</td></tr>
+          </tbody>
+        </table></div>
+        <p>Niepełne połączenia mogą zapełnić kolejkę oczekujących połączeń serwera, zależnie od jego implementacji i zabezpieczeń. Inni klienci mogą wtedy doświadczać opóźnień lub przekroczenia czasu oczekiwania.</p>
+        <h2 id="verification">Co sprawdzić</h2>
+        <ul>
+          <li>Zapis ruchu ze znanym przedziałem czasu i miejscem przechwytywania.</li>
+          <li>Liczbę SYN, ukończonych połączeń i retransmisji w porównaniu ze zwykłym ruchem.</li>
+          <li>Metryki serwera dotyczące kolejki połączeń i odrzuconych połączeń.</li>
+          <li>Utratę pakietów lub ograniczenia przechwytywania, które mogłyby wyjaśnić brak ACK.</li>
+        </ul>
+        <p>Raport nie mierzy tempa ataku ani wyczerpania zasobów. Sam źródłowy adres IP nie identyfikuje nadawcy ani nie dowodzi rozproszonego pochodzenia ruchu.</p>
+        <h2 id="response">Możliwa reakcja</h2>
+        <p>Sprawdziłbym z osobą odpowiedzialną za usługę zabezpieczenia przed SYN flood, limity połączeń i filtrowanie u operatora, a potem obserwował wpływ zmian na zwykły ruch. Tych działań nie wdrożono ani nie przetestowano w ćwiczeniu.</p>
+        <h2 id="sources">Plik i dokumentacja</h2>
+        <ul class="reading-list">
+          <li><a href="https://github.com/Blackecki/portfolio/blob/main/Cybersecurity%20incident%20report.docx">Pierwotny raport o incydencie ↗</a><span>DOCX · Ukończone ćwiczenie z kursu</span></li>
+          <li><a href="https://www.rfc-editor.org/rfc/rfc4987.html">RFC 4987 ↗</a><span>Ataki TCP SYN flood i sposoby ich ograniczania</span></li>
+        </ul>
+        <div class="next"><a href="../index.html#case-notes">← Analizy incydentów</a><a href="phishing.html">Analiza phishingu →</a></div>
+      </main>
+    </div>
+    <footer class="footer"><span>Krzysztof Czarnecki · Portfolio</span><a href="https://github.com/Blackecki/portfolio">Repozytorium strony</a></footer>
+  </div>
+</body>
+</html>

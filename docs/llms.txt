@@ -2,6 +2,8 @@
 
 Krzysztof Czarnecki (Blackecki) is based in Pruszcz Gdański, Poland, and is looking for Junior IT Support, Service Desk L1 or helpdesk work. English C1; Polish native.
 
+The portfolio is available in [English](https://blackecki.github.io/portfolio/) and [Polish](https://blackecki.github.io/portfolio/pl/). Each page has a matching language version.
+
 ## Background
 
 - IQFM, Retail Merchandiser, July–August 2026: in-store customer service, stock display and work reports.
