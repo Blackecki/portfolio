@@ -16,6 +16,7 @@ This repository contains the portfolio website, its source files and the origina
 
 ## Cybersecurity case studies
 
+- [Incident handler's journal](https://blackecki.github.io/portfolio/projects/incident-handler-journal.html) — four course entries covering ransomware, Wireshark, tcpdump and VirusTotal, with learning reflections and the original journal.
 - [Phishing email investigation](https://blackecki.github.io/portfolio/projects/phishing.html) — suspicious attachment analysis, file reputation and the rationale for SOC escalation.
 - [DNS service failure](https://blackecki.github.io/portfolio/projects/dns.html) — interpreting DNS/ICMP errors, evaluating possible causes and identifying further checks.
 - [SYN flood incident](https://blackecki.github.io/portfolio/projects/syn-flood.html) — incomplete TCP handshakes, availability impact and investigation requirements.

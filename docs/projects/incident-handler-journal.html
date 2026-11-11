@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en" data-theme="midnight">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Incident handler's journal — Krzysztof Czarnecki</title>
+  <meta name="description" content="Four Google Cybersecurity learning entries covering a ransomware scenario, Wireshark packet inspection, tcpdump capture and VirusTotal file reputation.">
+  <link rel="icon" href="../assets/favicon-32.png?v=3268a8ee5b" sizes="32x32" type="image/png">
+  <link rel="icon" href="../assets/favicon.svg?v=c19265df07" type="image/svg+xml"><script src="../assets/theme.js?v=65c7694d4d"></script>
+<link rel="stylesheet" href="../assets/style.css?v=d44c76424a">
+<link rel="canonical" href="https://blackecki.github.io/portfolio/projects/incident-handler-journal.html">
+<link rel="alternate" type="application/ld+json" href="../profile.json" title="Profile data">
+<link rel="alternate" type="text/plain" href="../llms.txt" title="Profile summary">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Krzysztof Czarnecki">
+<meta property="og:title" content="Incident handler&#x27;s journal — Krzysztof Czarnecki">
+<meta property="og:description" content="Four Google Cybersecurity learning entries covering a ransomware scenario, Wireshark packet inspection, tcpdump capture and VirusTotal file reputation.">
+<meta property="og:url" content="https://blackecki.github.io/portfolio/projects/incident-handler-journal.html">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://blackecki.github.io/portfolio/#person",
+      "name": "Krzysztof Czarnecki",
+      "givenName": "Krzysztof",
+      "familyName": "Czarnecki",
+      "alternateName": "Blackecki",
+      "url": "https://blackecki.github.io/portfolio/about.html",
+      "description": "Junior IT Support candidate with INF.03, English C1 and hands-on Windows/Linux, VMware and Raspberry Pi experience. Public Python and web projects include implementation notes, source code and recorded Cryplab functional checks.",
+      "email": "mailto:krzysztof.c.tech@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pruszcz Gdański",
+        "addressCountry": "PL"
+      },
+      "sameAs": [
+        "https://github.com/Blackecki",
+        "https://www.linkedin.com/in/krzysztofczarnecki/"
+      ],
+      "knowsLanguage": [
+        "Polish",
+        "English (C1)"
+      ],
+      "knowsAbout": [
+        "Windows",
+        "Linux",
+        "VMware",
+        "Virtual machines",
+        "TCP/IP",
+        "DNS",
+        "DHCP",
+        "Python",
+        "SQL",
+        "Git",
+        "Pi-hole",
+        "coreboot",
+        "Phishing analysis"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Pomorskie Szkoły Rzemiosł"
+      },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "INF.03 — Creating and administering websites and databases",
+        "credentialCategory": "Vocational qualification"
+      },
+      "subjectOf": {
+        "@type": "DigitalDocument",
+        "name": "Krzysztof Czarnecki — Junior IT Support CV",
+        "url": "https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf",
+        "encodingFormat": "application/pdf"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://blackecki.github.io/portfolio/#website",
+      "url": "https://blackecki.github.io/portfolio/",
+      "name": "Krzysztof Czarnecki — IT Support Portfolio",
+      "publisher": {
+        "@id": "https://blackecki.github.io/portfolio/#person"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://blackecki.github.io/portfolio/projects/incident-handler-journal.html#webpage",
+      "url": "https://blackecki.github.io/portfolio/projects/incident-handler-journal.html",
+      "name": "Incident handler's journal — Krzysztof Czarnecki",
+      "description": "Four Google Cybersecurity learning entries covering a ransomware scenario, Wireshark packet inspection, tcpdump capture and VirusTotal file reputation.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://blackecki.github.io/portfolio/#website"
+      },
+      "about": {
+        "@id": "https://blackecki.github.io/portfolio/#person"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="site">
+    <header class="masthead"><a class="wordmark" href="../index.html">Krzysztof Czarnecki</a><span class="site-label">cybersecurity portfolio</span><details class="theme-picker" data-theme-picker hidden>
+  <summary aria-label="Appearance settings"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor" stroke="none"/></svg><span>Appearance</span><span class="theme-current" data-theme-name>Midnight</span></summary>
+  <div class="theme-panel">
+    <div class="theme-panel-heading"><span>Appearance</span><button type="button" data-theme-close aria-label="Close appearance settings">×</button></div>
+    <fieldset><legend>Choose a theme</legend><div class="theme-options">
+<label class="theme-option"><input type="radio" name="theme" value="light" aria-label="Light"><span class="theme-option-body"><span class="theme-preview" data-preview="light" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Light<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Clean and bright</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="dark" aria-label="Dark"><span class="theme-option-body"><span class="theme-preview" data-preview="dark" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Dark<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Soft charcoal</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="paper" aria-label="Paper"><span class="theme-option-body"><span class="theme-preview" data-preview="paper" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Paper<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Warm and muted</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="midnight" aria-label="Midnight"><span class="theme-option-body"><span class="theme-preview" data-preview="midnight" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Midnight<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Deep navy</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="terminal" aria-label="Terminal"><span class="theme-option-body"><span class="theme-preview" data-preview="terminal" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">Terminal<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Green monospace</span></span></label>
+<label class="theme-option"><input type="radio" name="theme" value="system" aria-label="System"><span class="theme-option-body"><span class="theme-preview" data-preview="system" aria-hidden="true"><span class="preview-nav"></span><span class="preview-side"></span><span class="preview-lines"></span></span><span class="theme-option-name">System<span class="theme-check" aria-hidden="true">✓</span></span><span class="theme-description">Match your device</span></span></label>
+    </div></fieldset>
+    <p class="theme-footnote">Your choice is saved on this browser.</p>
+  </div>
+</details>
+</header>
+    <nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Projects</a><a href="../materials.html">Materials</a><a href="../about.html">About</a><a href="../assets/krzysztof-czarnecki-cv.pdf?v=c8f1e66d82">CV</a><a class="external" href="https://github.com/Blackecki">GitHub ↗</a></nav>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Journal navigation">
+        <section class="contents"><h2>On this page</h2><ul><li><a href="#contribution">My contribution</a></li><li><a href="#entries">Four learning entries</a></li><li><a href="#reflection">What I learned</a></li><li><a href="#scope">Evidence and scope</a></li><li><a href="#sources">Source material</a></li></ul></section>
+        <section><h2>Context</h2><p>Google Cybersecurity Certificate</p><p class="muted">Course exercises<br>11 November 2026</p></section>
+      </aside>
+      <main id="main" class="article">
+        <p class="breadcrumb"><a href="../index.html#case-notes">Incident case notes</a> / Incident handler's journal</p>
+        <h1>Incident handler's journal</h1>
+        <div class="meta"><span>Course exercises</span><span>11 November 2026</span><span>Wireshark · tcpdump · VirusTotal</span></div>
+        <p class="intro">Four learning entries connecting incident documentation with packet inspection, command-line capture and file-reputation checks.</p>
+        <p><a href="https://github.com/Blackecki/portfolio/blob/main/Incident%20Handler%20Journal.docx">Original journal on GitHub ↗</a> <span class="small muted">DOCX</span></p>
+        <h2 id="contribution">My contribution</h2>
+        <p>I completed the journal using the course template, recording each activity, the tools used, incident details where applicable and my takeaways. The work combines two supplied incident scenarios with practical exercises in Wireshark and tcpdump.</p>
+        <h2 id="entries">Four learning entries</h2>
+        <h3>1. Ransomware at a health care company</h3>
+        <p>I summarized a scenario in which a phishing email led to ransomware encrypting company files. Using the five W's, I recorded who was involved, what happened, when and where it occurred, and the attackers' apparent financial motive.</p>
+        <p>The scenario reports that the company shut down its computer systems. My notes discuss response stages and possible improvements, including disconnected backups, staff awareness and a response plan. No analysis tool was used for this entry.</p>
+        <h3>2. Inspecting a capture in Wireshark</h3>
+        <p>I opened the supplied packet capture and examined individual packets and their details to understand communication between devices. This gave me practice navigating a graphical traffic-analysis tool and relating packet information to detection and analysis.</p>
+        <h3>3. Capturing traffic with tcpdump</h3>
+        <p>I used tcpdump in the terminal to capture network packets and tried filters to narrow the traffic shown. Incorrectly typed commands initially produced unexpected results; checking the instructions and repeating the steps helped me complete the activity.</p>
+        <h3>4. Checking file reputation with VirusTotal</h3>
+        <p>For a supplied scenario involving a suspicious email attachment at a financial services company, I checked the file's SHA-256 hash with VirusTotal and recorded the reported malicious reputation. The journal identifies the alert time and affected environment from the scenario.</p>
+        <p>This uses the same file hash as my <a href="phishing.html">phishing investigation case note</a>. The journal adds my activity record and reflection; it does not represent a separate real-world incident.</p>
+        <h2 id="reflection">What I learned</h2>
+        <ul>
+          <li><strong>Keep usable notes:</strong> record the activity, tools, relevant details and follow-up ideas so another reader can follow the reasoning.</li>
+          <li><strong>Work through unfamiliar tools:</strong> Wireshark became easier to navigate with practice; tcpdump required more care with command syntax.</li>
+          <li><strong>Corroborate an alert:</strong> a file-reputation result is one input to an investigation and should be considered alongside other evidence.</li>
+        </ul>
+        <p>My next practice goal is to inspect another packet capture and become more confident with command-line traffic analysis.</p>
+        <h2 id="scope">Evidence and scope</h2>
+        <p>The original journal contains four entries dated 11 November 2026 and a final reflection. It records my course activities and observations. The Wireshark and tcpdump exercises do not describe actual incidents; the ransomware and attachment cases are supplied scenarios.</p>
+        <p>The journal does not include packet captures, command transcripts or tool-result screenshots. It supports a record of learning and tool use, with technical conclusions limited to the information recorded. This portfolio summary does not include a new VirusTotal lookup.</p>
+        <h2 id="sources">Source material</h2>
+        <ul class="reading-list">
+          <li><a href="https://github.com/Blackecki/portfolio/blob/main/Incident%20Handler%20Journal.docx">Incident Handler Journal ↗</a><span>DOCX · Four completed course entries and reflections</span></li>
+          <li><a href="phishing.html">Related phishing investigation</a><span>Case note covering the same attachment hash, escalation reasoning and supporting worksheet</span></li>
+        </ul>
+        <div class="next"><a href="../index.html#case-notes">← All incident case notes</a><a href="../materials.html">Original course materials →</a></div>
+      </main>
+    </div>
+    <footer class="footer"><span>Krzysztof Czarnecki · Portfolio</span><a href="https://github.com/Blackecki/portfolio">View on GitHub</a></footer>
+  </div>
+</body>
+</html>

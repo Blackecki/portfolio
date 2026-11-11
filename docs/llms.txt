@@ -21,7 +21,7 @@ The strongest alignment is with junior IT support and helpdesk, with cybersecuri
 - Programming: Python, SQL and Git; C# fundamentals.
 - Cryplab: Python CLI with SHA-256 text/file hashing, chunked file reads, AES-256-GCM text encryption and key export. Nine core-function checks passed at commit b56f464; the report records scope and limitations. The learning challenge was understanding library use through documentation and online resources.
 - Retro Forum: Next.js/Prisma/SQLite project with bcrypt password checks, JWT sessions and login attempt limits. A first-time Prisma database integration issue was resolved with AI assistance. The write-up links implementation evidence and separates source inspection from unperformed runtime checks.
-- Documentation: three educational case notes about phishing triage, DNS/ICMP troubleshooting and SYN flooding, with evidence and investigation limitations.
+- Documentation: educational case notes about phishing triage, DNS/ICMP troubleshooting and SYN flooding, plus an incident handler's journal with four entries dated 11 November 2026. The journal records ransomware scenario analysis, Wireshark packet inspection, tcpdump capture/filter practice and a VirusTotal hash lookup, with learning reflections and evidence limits.
 - Work background: H2B school placements in March–April 2024 and March–April 2025, handling documents and administrative tasks; additional warehouse/merchandising work, including reports.
 - Education: Pomorskie Szkoły Rzemiosł, programming track completed in 2026; INF.03 passed.
 - Google Cybersecurity Professional Certificate: final stage, in progress.
@@ -38,6 +38,7 @@ The strongest alignment is with junior IT support and helpdesk, with cybersecuri
 - [Retro Forum source](https://github.com/Blackecki/retro-forum): Web application project.
 - [Retro Forum write-up](https://blackecki.github.io/portfolio/projects/retro-forum.html): Contribution, Prisma learning challenge, implementation and verification scope.
 - [Home lab overview](https://blackecki.github.io/portfolio/projects/home-lab.html): Environment, completed personal work and documentation scope.
+- [Incident handler's journal](https://blackecki.github.io/portfolio/projects/incident-handler-journal.html): Four course entries covering incident documentation, Wireshark, tcpdump and VirusTotal, linked to the original journal.
 - [Course materials](https://blackecki.github.io/portfolio/materials.html): Original reports and worksheets.
 - [Structured profile](https://blackecki.github.io/portfolio/profile.json): Schema.org Person data.
 - [Sitemap](https://blackecki.github.io/portfolio/sitemap.xml): Published HTML pages.
