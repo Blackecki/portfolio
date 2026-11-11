@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home lab and ThinkPad — Krzysztof Czarnecki</title>
-  <meta name="description" content="Personal Windows/Linux and VMware lab, Raspberry Pi 4 Model B with Pi-hole, and coreboot on a ThinkPad T440p.">
+  <meta name="description" content="A Linux server with SSH and a website, VMware Windows/Linux environments, Raspberry Pi with Pi-hole, Bash backups for Minecraft and coreboot on a ThinkPad T440p.">
   <link rel="icon" href="../assets/favicon-32.png?v=3268a8ee5b" sizes="32x32" type="image/png">
   <link rel="icon" href="../assets/favicon.svg?v=c19265df07" type="image/svg+xml"><script src="../assets/theme.js?v=65c7694d4d"></script>
-<link rel="stylesheet" href="../assets/style.css?v=d44c76424a">
+<link rel="stylesheet" href="../assets/style.css?v=b01175bdee">
 <link rel="canonical" href="https://blackecki.github.io/portfolio/projects/home-lab.html">
 <link rel="alternate" type="application/ld+json" href="../profile.json" title="Profile data">
 <link rel="alternate" type="text/plain" href="../llms.txt" title="Profile summary">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Krzysztof Czarnecki">
 <meta property="og:title" content="Home lab and ThinkPad — Krzysztof Czarnecki">
-<meta property="og:description" content="Personal Windows/Linux and VMware lab, Raspberry Pi 4 Model B with Pi-hole, and coreboot on a ThinkPad T440p.">
+<meta property="og:description" content="A Linux server with SSH and a website, VMware Windows/Linux environments, Raspberry Pi with Pi-hole, Bash backups for Minecraft and coreboot on a ThinkPad T440p.">
 <meta property="og:url" content="https://blackecki.github.io/portfolio/projects/home-lab.html">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
@@ -28,7 +28,7 @@
       "familyName": "Czarnecki",
       "alternateName": "Blackecki",
       "url": "https://blackecki.github.io/portfolio/about.html",
-      "description": "Junior IT Support candidate with INF.03, English C1 and hands-on Windows/Linux, VMware and Raspberry Pi experience. Public Python and web projects include implementation notes, source code and recorded Cryplab functional checks.",
+      "description": "Junior IT Support, Service Desk L1 and helpdesk candidate with English C1, INF.03, two IT internships and customer-facing retail experience. Hands-on Windows/Linux, VMware, SSH, Pi-hole, Bash backups and Python projects.",
       "email": "mailto:krzysztof.c.tech@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -46,33 +46,67 @@
       "knowsAbout": [
         "Windows",
         "Linux",
+        "Ubuntu",
+        "Qubes OS",
         "VMware",
         "Virtual machines",
+        "SSH",
+        "Linux web services",
         "TCP/IP",
         "DNS",
         "DHCP",
+        "HTTP/HTTPS",
+        "LAN",
         "Python",
-        "SQL",
+        "Bash",
+        "SQL fundamentals",
+        "C# fundamentals",
         "Git",
         "Pi-hole",
         "coreboot",
+        "Backups",
+        "Wireshark",
+        "tcpdump",
+        "VirusTotal",
         "Phishing analysis"
       ],
       "alumniOf": {
         "@type": "EducationalOrganization",
         "name": "Pomorskie Szkoły Rzemiosł"
       },
-      "hasCredential": {
-        "@type": "EducationalOccupationalCredential",
-        "name": "INF.03 — Creating and administering websites and databases",
-        "credentialCategory": "Vocational qualification"
-      },
-      "subjectOf": {
-        "@type": "DigitalDocument",
-        "name": "Krzysztof Czarnecki — Junior IT Support CV",
-        "url": "https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf",
-        "encodingFormat": "application/pdf"
-      }
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "INF.03 — Creating and administering websites and databases",
+          "credentialCategory": "Vocational qualification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Tools of the Trade: Linux and SQL",
+          "credentialCategory": "Course completion",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Google"
+          }
+        }
+      ],
+      "subjectOf": [
+        {
+          "@type": "DigitalDocument",
+          "name": "Krzysztof Czarnecki — CV (English)",
+          "url": "https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf",
+          "encodingFormat": "application/pdf",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "DigitalDocument",
+          "name": "Krzysztof Czarnecki — CV (Polish)",
+          "url": "https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv-pl.pdf",
+          "encodingFormat": "application/pdf",
+          "inLanguage": "pl"
+        }
+      ],
+      "telephone": "+48 791 662 699"
     },
     {
       "@type": "WebSite",
@@ -88,7 +122,7 @@
       "@id": "https://blackecki.github.io/portfolio/projects/home-lab.html#webpage",
       "url": "https://blackecki.github.io/portfolio/projects/home-lab.html",
       "name": "Home lab and ThinkPad — Krzysztof Czarnecki",
-      "description": "Personal Windows/Linux and VMware lab, Raspberry Pi 4 Model B with Pi-hole, and coreboot on a ThinkPad T440p.",
+      "description": "A Linux server with SSH and a website, VMware Windows/Linux environments, Raspberry Pi with Pi-hole, Bash backups for Minecraft and coreboot on a ThinkPad T440p.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://blackecki.github.io/portfolio/#website"
@@ -120,26 +154,32 @@
   </div>
 </details>
 </header>
-    <nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Projects</a><a href="../materials.html">Materials</a><a href="../about.html">About</a><a href="../assets/krzysztof-czarnecki-cv.pdf?v=c8f1e66d82">CV</a><a class="external" href="https://github.com/Blackecki">GitHub ↗</a></nav>
+    <nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Projects</a><a href="../materials.html">Materials</a><a href="../about.html">About</a><a href="../assets/krzysztof-czarnecki-cv.pdf?v=005d302bd6">CV</a><a class="external" href="https://github.com/Blackecki">GitHub ↗</a></nav>
     <div class="layout">
-      <aside class="sidebar" aria-label="Project navigation"><section class="contents"><h2>On this page</h2><ul><li><a href="#scope">Work completed</a></li><li><a href="#relevance">IT support relevance</a></li><li><a href="#environment">Environment</a></li><li><a href="#evidence">Evidence and scope</a></li></ul></section><section><h2>Project context</h2><p>VMware · Pi-hole · coreboot</p><p><a href="https://github.com/merge/skulls">Source on GitHub ↗</a></p></section></aside>
+      <aside class="sidebar" aria-label="Project navigation"><section class="contents"><h2>On this page</h2><ul><li><a href="#scope">Work completed</a></li><li><a href="#backups">Minecraft backups</a></li><li><a href="#relevance">IT support relevance</a></li><li><a href="#environment">Environment</a></li><li><a href="#evidence">Evidence and scope</a></li></ul></section><section><h2>Project context</h2><p>VMware · Pi-hole · coreboot</p><p><a href="https://github.com/merge/skulls">Skulls documentation ↗</a></p></section></aside>
       <main id="main" class="article">
         <p class="breadcrumb"><a href="../index.html#personal-projects">Personal projects</a> / Home lab and ThinkPad</p>
         <h1>Home lab and ThinkPad</h1>
-        <div class="meta"><span>Personal learning project</span><span>VMware · Pi-hole · coreboot</span></div>
-        <p class="intro">My own equipment is a place to practise system setup, virtual machines, DNS services and firmware installation.</p>
+        <div class="meta"><span>Personal learning projects</span><span>Linux · VMware · SSH · Bash · coreboot</span></div>
+        <p class="intro">My own equipment is a place to practise system setup, network services, server backups and firmware installation.</p>
         <h2 id="scope">Work completed</h2>
         <ul>
           <li>A Raspberry Pi home lab with Pi-hole.</li>
+          <li>A Linux server with SSH access and a website, for hands-on practice configuring network services.</li>
           <li>Windows and Linux virtual environments using VMware.</li>
-          <li>A coreboot installation on my ThinkPad, using a Raspberry Pi and the Skulls instructions.</li>
+          <li>A coreboot installation on my ThinkPad T440p, programming the BIOS chip via Raspberry Pi following the Skulls instructions.</li>
         </ul>
+        <h2 id="backups">Minecraft server backups</h2>
+        <p>I wrote a Bash script for a Minecraft server on Linux. It creates <code>tar.gz</code> backup archives, excludes unneeded directories and checks whether the operation succeeded.</p>
+        <p>The project gave me practice with shell scripting, file archiving and checking the result of a server maintenance task. The script and a restore-test record are not published here; the backup description records the work described in my CV.</p>
         <h2 id="relevance">Why this is relevant to IT support</h2>
         <p>The useful experience is working with operating systems, network services and technical instructions on real equipment. The lab supports practice with system configuration and troubleshooting, while the firmware work involved following a hardware-specific installation procedure.</p>
         <h2 id="environment">Environment</h2>
         <div class="table-scroll"><table><thead><tr><th scope="col">Component</th><th scope="col">Setup</th></tr></thead><tbody>
           <tr><td>Home lab</td><td>Raspberry Pi 4 Model B with Pi-hole</td></tr>
           <tr><td>Virtualization</td><td>VMware; Windows and Linux environments</td></tr>
+          <tr><td>Network services</td><td>Linux server with SSH access and a website; Pi-hole DNS</td></tr>
+          <tr><td>Server maintenance</td><td>Bash backup script for a Minecraft server; tar.gz archives</td></tr>
           <tr><td>Firmware project</td><td>Lenovo ThinkPad T440p; coreboot via Skulls</td></tr>
         </tbody></table></div>
         <h2 id="evidence">Evidence and documentation scope</h2>

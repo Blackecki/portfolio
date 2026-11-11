@@ -6,7 +6,7 @@
   <meta name="description" content="A reviewed course case about failed DNS queries, ICMP port-unreachable messages and evidence-based troubleshooting.">
   <link rel="icon" href="../assets/favicon-32.png?v=3268a8ee5b" sizes="32x32" type="image/png">
   <link rel="icon" href="../assets/favicon.svg?v=c19265df07" type="image/svg+xml"><script src="../assets/theme.js?v=65c7694d4d"></script>
-<link rel="stylesheet" href="../assets/style.css?v=d44c76424a">
+<link rel="stylesheet" href="../assets/style.css?v=b01175bdee">
 <link rel="canonical" href="https://blackecki.github.io/portfolio/projects/dns.html">
 <link rel="alternate" type="application/ld+json" href="../profile.json" title="Profile data">
 <link rel="alternate" type="text/plain" href="../llms.txt" title="Profile summary">
@@ -28,7 +28,7 @@
       "familyName": "Czarnecki",
       "alternateName": "Blackecki",
       "url": "https://blackecki.github.io/portfolio/about.html",
-      "description": "Junior IT Support candidate with INF.03, English C1 and hands-on Windows/Linux, VMware and Raspberry Pi experience. Public Python and web projects include implementation notes, source code and recorded Cryplab functional checks.",
+      "description": "Junior IT Support, Service Desk L1 and helpdesk candidate with English C1, INF.03, two IT internships and customer-facing retail experience. Hands-on Windows/Linux, VMware, SSH, Pi-hole, Bash backups and Python projects.",
       "email": "mailto:krzysztof.c.tech@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -46,33 +46,67 @@
       "knowsAbout": [
         "Windows",
         "Linux",
+        "Ubuntu",
+        "Qubes OS",
         "VMware",
         "Virtual machines",
+        "SSH",
+        "Linux web services",
         "TCP/IP",
         "DNS",
         "DHCP",
+        "HTTP/HTTPS",
+        "LAN",
         "Python",
-        "SQL",
+        "Bash",
+        "SQL fundamentals",
+        "C# fundamentals",
         "Git",
         "Pi-hole",
         "coreboot",
+        "Backups",
+        "Wireshark",
+        "tcpdump",
+        "VirusTotal",
         "Phishing analysis"
       ],
       "alumniOf": {
         "@type": "EducationalOrganization",
         "name": "Pomorskie Szkoły Rzemiosł"
       },
-      "hasCredential": {
-        "@type": "EducationalOccupationalCredential",
-        "name": "INF.03 — Creating and administering websites and databases",
-        "credentialCategory": "Vocational qualification"
-      },
-      "subjectOf": {
-        "@type": "DigitalDocument",
-        "name": "Krzysztof Czarnecki — Junior IT Support CV",
-        "url": "https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf",
-        "encodingFormat": "application/pdf"
-      }
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "INF.03 — Creating and administering websites and databases",
+          "credentialCategory": "Vocational qualification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Tools of the Trade: Linux and SQL",
+          "credentialCategory": "Course completion",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Google"
+          }
+        }
+      ],
+      "subjectOf": [
+        {
+          "@type": "DigitalDocument",
+          "name": "Krzysztof Czarnecki — CV (English)",
+          "url": "https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf",
+          "encodingFormat": "application/pdf",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "DigitalDocument",
+          "name": "Krzysztof Czarnecki — CV (Polish)",
+          "url": "https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv-pl.pdf",
+          "encodingFormat": "application/pdf",
+          "inLanguage": "pl"
+        }
+      ],
+      "telephone": "+48 791 662 699"
     },
     {
       "@type": "WebSite",
@@ -120,7 +154,7 @@
   </div>
 </details>
 </header>
-    <nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Projects</a><a href="../materials.html">Materials</a><a href="../about.html">About</a><a href="../assets/krzysztof-czarnecki-cv.pdf?v=c8f1e66d82">CV</a><a class="external" href="https://github.com/Blackecki">GitHub ↗</a></nav>
+    <nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Projects</a><a href="../materials.html">Materials</a><a href="../about.html">About</a><a href="../assets/krzysztof-czarnecki-cv.pdf?v=005d302bd6">CV</a><a class="external" href="https://github.com/Blackecki">GitHub ↗</a></nav>
     <div class="layout">
       <aside class="sidebar" aria-label="Case navigation"><section class="contents"><h2>On this page</h2><ul><li><a href="#finding">Finding</a></li><li><a href="#evidence">Available information</a></li><li><a href="#hypotheses">Possible explanations</a></li><li><a href="#revision">Review of the original</a></li><li><a href="#sources">Sources</a></li></ul></section><section><h2>Context</h2><p>Google Cybersecurity Certificate</p><p class="muted">Course exercise<br>DNS · UDP · ICMP</p></section></aside>
       <main id="main" class="article">

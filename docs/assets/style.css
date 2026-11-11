@@ -107,6 +107,8 @@ a:focus-visible, summary:focus-visible, button:focus-visible { outline: 2px soli
 .sidebar a { text-decoration: none; }
 .muted, .meta { color: var(--muted); }
 .small { font-size: 13px; }
+.cv-downloads { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; margin-bottom: 14px; }
+.cv-downloads .cv-download-row { margin: 0; }
 .cv-download-row { display: inline-flex; align-items: center; gap: 10px; max-width: 100%; margin: 0 0 14px; vertical-align: middle; }
 .cv-download-row > a { min-width: 0; }
 .download-indicator { flex: 0 0 18px; width: 18px; height: 18px; display: grid; place-items: center; color: var(--link); }

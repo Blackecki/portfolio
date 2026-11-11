@@ -1,8 +1,8 @@
 # Krzysztof Czarnecki — IT Support & Cybersecurity
 
-My portfolio brings together practical work with Windows, Linux and networking, personal software projects, and cybersecurity case studies. I am a programming-track graduate with INF.03, developing my skills for junior IT support roles.
+My portfolio brings together Windows/Linux and VMware lab work, Linux network services, Bash backups, software projects and cybersecurity case studies. I am a programming-track graduate with INF.03 and C1 English, applying for Junior IT Support, Service Desk L1 and helpdesk roles. My background includes two IT internships and customer-facing retail work.
 
-**[Visit the portfolio](https://blackecki.github.io/portfolio/)** · **[CV](https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf)** · **[LinkedIn](https://www.linkedin.com/in/krzysztofczarnecki/)**
+**[Visit the portfolio](https://blackecki.github.io/portfolio/)** · **[CV in English](https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf)** · **[CV po polsku](https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv-pl.pdf)** · **[LinkedIn](https://www.linkedin.com/in/krzysztofczarnecki/)**
 
 This repository contains the portfolio website, its source files and the original coursework reports. The software projects below have their own repositories.
 
@@ -11,8 +11,9 @@ This repository contains the portfolio website, its source files and the origina
 | Project | Focus | Evidence |
 | --- | --- | --- |
 | [Cryplab](https://blackecki.github.io/portfolio/projects/cryplab.html) | Python tool with SHA-256 text/file hashing, AES-GCM text encryption and key export. | [Source](https://github.com/Blackecki/Cryplab) · [9 functional checks](https://blackecki.github.io/portfolio/assets/cryplab-verification.txt) |
-| [Retro Forum](https://blackecki.github.io/portfolio/projects/retro-forum.html) | Next.js application with Prisma/SQLite, JWT sessions, bcrypt password checks and login attempt limits. | [Source and setup](https://github.com/Blackecki/retro-forum) |
-| [Home lab and ThinkPad firmware](https://blackecki.github.io/portfolio/projects/home-lab.html) | Pi-hole, Windows/Linux virtual machines in VMware, and a coreboot installation following the Skulls documentation. | Setup overview and technical references |
+| [Retro Forum](https://blackecki.github.io/portfolio/projects/retro-forum.html) | Next.js/TypeScript application developed with AI assistance; personal review of authentication, authorization and sessions with Prisma/SQLite, JWT and bcrypt. | [Source and setup](https://github.com/Blackecki/retro-forum) |
+| [Home lab and ThinkPad firmware](https://blackecki.github.io/portfolio/projects/home-lab.html) | Linux server with SSH and a website, Pi-hole, VMware Windows/Linux environments, and coreboot installed by programming the BIOS chip via Raspberry Pi. | Setup overview and technical references |
+| [Minecraft server backups](https://blackecki.github.io/portfolio/projects/home-lab.html#backups) | Bash script that creates tar.gz archives, excludes unneeded directories and checks the operation result. | Project overview |
 
 ## Cybersecurity case studies
 
@@ -25,13 +26,13 @@ These case studies are based on Google Cybersecurity Professional Certificate ex
 
 ## Website
 
-The site uses static HTML, CSS and a small amount of JavaScript, hosted on GitHub Pages. It includes responsive layouts, keyboard navigation, selectable colour themes and a downloadable CV. Content and navigation remain accessible without JavaScript.
+The site uses static HTML, CSS and a small amount of JavaScript, hosted on GitHub Pages. It includes responsive layouts, keyboard navigation, selectable colour themes and downloadable CVs in English and Polish. Content and navigation remain accessible without JavaScript.
 
 ## Repository structure
 
 | Path | Contents |
 | --- | --- |
-| `docs/` | Website source: HTML, CSS, JavaScript, CV and public profile data. |
+| `docs/` | Website source: HTML, CSS, JavaScript, English/Polish CVs and public profile data. |
 | `brand/` | Blackecki vector logo, transparent PNG exports, profile icon and identity kit. |
 | Repository root | Original coursework reports and worksheets. |
 
