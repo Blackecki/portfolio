@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Retro Forum — Krzysztof Czarnecki</title>
-  <meta name="description" content="Retro Forum: a personal Next.js application with Prisma/SQLite, authentication, implementation evidence and learning notes.">
+  <meta name="description" content="Retro Forum: a Next.js and SQLite project. Notes on Prisma, login, sessions and the code reviewed.">
   <link rel="icon" href="../assets/favicon-32.png?v=3268a8ee5b" sizes="32x32" type="image/png">
   <link rel="icon" href="../assets/favicon.svg?v=c19265df07" type="image/svg+xml"><script src="../assets/theme.js?v=65c7694d4d"></script>
 <link rel="stylesheet" href="../assets/style.css?v=b01175bdee">
@@ -13,7 +13,7 @@
 <meta name="robots" content="index, follow">
 <meta name="author" content="Krzysztof Czarnecki">
 <meta property="og:title" content="Retro Forum — Krzysztof Czarnecki">
-<meta property="og:description" content="Retro Forum: a personal Next.js application with Prisma/SQLite, authentication, implementation evidence and learning notes.">
+<meta property="og:description" content="Retro Forum: a Next.js and SQLite project. Notes on Prisma, login, sessions and the code reviewed.">
 <meta property="og:url" content="https://blackecki.github.io/portfolio/projects/retro-forum.html">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
@@ -28,7 +28,7 @@
       "familyName": "Czarnecki",
       "alternateName": "Blackecki",
       "url": "https://blackecki.github.io/portfolio/about.html",
-      "description": "Junior IT Support, Service Desk L1 and helpdesk candidate with English C1, INF.03, two IT internships and customer-facing retail experience. Hands-on Windows/Linux, VMware, SSH, Pi-hole, Bash backups and Python projects.",
+      "description": "Krzysztof Czarnecki is looking for Junior IT Support or Service Desk work in the Tricity area. INF.03, English C1, two IT internships, retail experience, a Windows/Linux home lab and Python/Bash projects.",
       "email": "mailto:krzysztof.c.tech@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -122,7 +122,7 @@
       "@id": "https://blackecki.github.io/portfolio/projects/retro-forum.html#webpage",
       "url": "https://blackecki.github.io/portfolio/projects/retro-forum.html",
       "name": "Retro Forum — Krzysztof Czarnecki",
-      "description": "Retro Forum: a personal Next.js application with Prisma/SQLite, authentication, implementation evidence and learning notes.",
+      "description": "Retro Forum: a Next.js and SQLite project. Notes on Prisma, login, sessions and the code reviewed.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://blackecki.github.io/portfolio/#website"
@@ -156,37 +156,35 @@
 </header>
     <nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Projects</a><a href="../materials.html">Materials</a><a href="../about.html">About</a><a href="../assets/krzysztof-czarnecki-cv.pdf?v=005d302bd6">CV</a><a class="external" href="https://github.com/Blackecki">GitHub ↗</a></nav>
     <div class="layout">
-      <aside class="sidebar" aria-label="Project navigation"><section class="contents"><h2>On this page</h2><ul><li><a href="#goal">Goal and contribution</a></li><li><a href="#challenge">Prisma challenge</a></li><li><a href="#implementation">Implementation</a></li><li><a href="#verification">Verification scope</a></li><li><a href="#tradeoffs">Trade-offs</a></li><li><a href="#evidence">Evidence</a></li></ul></section><section><h2>Project context</h2><p>Next.js · Prisma · SQLite</p><p><a href="https://github.com/Blackecki/retro-forum">Source on GitHub ↗</a></p></section></aside>
+      <aside class="sidebar" aria-label="Project navigation"><section class="contents"><h2>On this page</h2><ul><li><a href="#goal">Building the forum</a></li><li><a href="#challenge">Prisma</a></li><li><a href="#implementation">Login and sessions</a></li><li><a href="#verification">Version reviewed</a></li><li><a href="#tradeoffs">Still to check</a></li><li><a href="#evidence">Code</a></li></ul></section><section><h2>Project context</h2><p>Next.js · Prisma · SQLite</p><p><a href="https://github.com/Blackecki/retro-forum">Source on GitHub ↗</a></p></section></aside>
       <main id="main" class="article">
         <p class="breadcrumb"><a href="../index.html#personal-projects">Personal projects</a> / Retro Forum</p>
         <h1>Retro Forum</h1>
-        <div class="meta"><span>Personal learning project</span><span>Next.js · Prisma · SQLite</span></div>
-        <p class="intro">A forum project for learning how web application features, database access and authentication fit together.</p>
-        <p><a href="https://github.com/Blackecki/retro-forum">Source code and setup instructions ↗</a></p>
-        <h2 id="goal">Goal and contribution</h2>
-        <p>I developed the forum with AI assistance, working with Next.js, TypeScript, Prisma and SQLite. I personally reviewed authentication, authorization and session-handling code. The learning focus is understanding the relationship between the application, its data layer, authenticated users and administrative actions.</p>
-        <h2 id="challenge">A practical challenge</h2>
-        <p>This was my first experience with Prisma. Initial database integration caused a problem that I worked through with AI assistance. The useful learning topic was the database workflow and its connection to the application.</p>
-        <h2 id="implementation">Implementation overview</h2>
-        <div class="table-scroll"><table><thead><tr><th scope="col">Area</th><th scope="col">Implementation visible in the repository</th></tr></thead><tbody>
-          <tr><td>Data layer</td><td>Prisma with SQLite for application data.</td></tr>
-          <tr><td>Authentication</td><td>bcrypt password checks and signed JWT sessions stored in cookies.</td></tr>
-          <tr><td>Login attempt handling</td><td>Per-IP request limits and per-account failed-attempt tracking.</td></tr>
-          <tr><td>Current user lookup</td><td>User and role information is read from the database when resolving the current user.</td></tr>
-        </tbody></table></div>
-        <h2 id="verification">Evidence and verification scope</h2>
-        <p>The evidence for this write-up is the public source and README at <a href="https://github.com/Blackecki/retro-forum/tree/c04b6df448d04fa18fa750ef0a91c1d1dd2046c2">commit c04b6df</a>. The implementation was inspected for this summary. A runtime test report and public deployment are not included.</p>
-        <p>Before treating the application as deployment-ready, the useful checks are successful and failed login, rate-limit responses, unauthorized administrative access, logout and session behaviour. These are proposed checks rather than recorded passing results.</p>
-        <h2 id="tradeoffs">Trade-offs and next steps</h2>
-        <p>The repository documents in-memory IP rate limits. A deployment across multiple application instances would need shared enforcement. Automated smoke tests and a reproducible note about the Prisma issue would make future changes easier to verify.</p>
-        <p>This project demonstrates work with a database-backed application and authentication code. A production security review is a separate activity.</p>
-        <h2 id="evidence">Implementation evidence</h2>
-        <ul class="reading-list">
-          <li><a href="https://github.com/Blackecki/retro-forum/blob/c04b6df448d04fa18fa750ef0a91c1d1dd2046c2/app/api/auth/login/route.ts">Login request handling ↗</a><span>Password checks, attempt limits and session cookie creation</span></li>
-          <li><a href="https://github.com/Blackecki/retro-forum/blob/c04b6df448d04fa18fa750ef0a91c1d1dd2046c2/lib/auth.ts">Authentication helpers ↗</a><span>Token verification and current-user lookup</span></li>
-          <li><a href="https://github.com/Blackecki/retro-forum#readme">Project README ↗</a><span>Setup, environment variables and documented trade-offs</span></li>
+        <div class="meta"><span>Personal project</span><span>Next.js · TypeScript · Prisma · SQLite</span></div>
+        <p class="intro">A forum application where I worked on database access, login and user permissions.</p>
+        <p><a href="https://github.com/Blackecki/retro-forum">Code and setup instructions ↗</a></p>
+        <h2 id="goal">Building the forum</h2>
+        <p>I used AI assistance while developing the application, then reviewed the login, authorization and session code myself. This was my first project with Prisma.</p>
+        <h2 id="challenge">Working with Prisma</h2>
+        <p>Prisma was new to me. I needed help getting the database integration working before I could continue with the forum.</p>
+        <h2 id="implementation">Login and sessions</h2>
+        <ul>
+          <li>Prisma connects the application to SQLite.</li>
+          <li>bcrypt checks passwords; signed JWTs are stored in cookies.</li>
+          <li>Login attempts are limited by IP, with failed attempts also tracked per account.</li>
+          <li>The current user's details and role are read from the database.</li>
         </ul>
-        <div class="next"><a href="../index.html#personal-projects">← All personal projects</a><a href="../about.html#contact">CV and contact →</a></div>
+        <h2 id="verification">Version reviewed</h2>
+        <p>The code links below refer to <a href="https://github.com/Blackecki/retro-forum/tree/c04b6df448d04fa18fa750ef0a91c1d1dd2046c2">commit c04b6df</a>. This page describes the source code; there is no published runtime test report or public demo.</p>
+        <h2 id="tradeoffs">Still to check</h2>
+        <p>I would next test successful and failed logins, rate limits, logout and access to admin actions. The IP limit is held in memory; running several application instances would require a shared limit store.</p>
+        <h2 id="evidence">Code</h2>
+        <ul class="reading-list">
+          <li><a href="https://github.com/Blackecki/retro-forum/blob/c04b6df448d04fa18fa750ef0a91c1d1dd2046c2/app/api/auth/login/route.ts">Login handler ↗</a><span>Password checks, attempt limits and session cookie</span></li>
+          <li><a href="https://github.com/Blackecki/retro-forum/blob/c04b6df448d04fa18fa750ef0a91c1d1dd2046c2/lib/auth.ts">Authentication helpers ↗</a><span>Token verification and current-user lookup</span></li>
+          <li><a href="https://github.com/Blackecki/retro-forum#readme">README ↗</a><span>Installation and environment variables</span></li>
+        </ul>
+        <div class="next"><a href="../index.html#personal-projects">← Personal projects</a><a href="../about.html#contact">CV and contact →</a></div>
       </main>
     </div>
     <footer class="footer"><span>Krzysztof Czarnecki · Portfolio</span><a href="https://github.com/Blackecki/portfolio">View on GitHub</a></footer>

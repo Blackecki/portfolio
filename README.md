@@ -1,44 +1,30 @@
-# Krzysztof Czarnecki — IT Support & Cybersecurity
+# Krzysztof Czarnecki
 
-My portfolio brings together Windows/Linux and VMware lab work, Linux network services, Bash backups, software projects and cybersecurity case studies. I am a programming-track graduate with INF.03 and C1 English, applying for Junior IT Support, Service Desk L1 and helpdesk roles. My background includes two IT internships and customer-facing retail work.
+I'm looking for Junior IT Support, Service Desk L1 or helpdesk work in the Tricity area. I have INF.03, English C1, two IT internships and retail experience. This repository contains my portfolio and cybersecurity coursework.
 
-**[Visit the portfolio](https://blackecki.github.io/portfolio/)** · **[CV in English](https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf)** · **[CV po polsku](https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv-pl.pdf)** · **[LinkedIn](https://www.linkedin.com/in/krzysztofczarnecki/)**
+[Portfolio](https://blackecki.github.io/portfolio/) · [English CV](https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf) · [CV po polsku](https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv-pl.pdf) · [LinkedIn](https://www.linkedin.com/in/krzysztofczarnecki/)
 
-This repository contains the portfolio website, its source files and the original coursework reports. The software projects below have their own repositories.
+## Projects
 
-## Personal projects
-
-| Project | Focus | Evidence |
+| Project | What it does | Code or notes |
 | --- | --- | --- |
-| [Cryplab](https://blackecki.github.io/portfolio/projects/cryplab.html) | Python tool with SHA-256 text/file hashing, AES-GCM text encryption and key export. | [Source](https://github.com/Blackecki/Cryplab) · [9 functional checks](https://blackecki.github.io/portfolio/assets/cryplab-verification.txt) |
-| [Retro Forum](https://blackecki.github.io/portfolio/projects/retro-forum.html) | Next.js/TypeScript application developed with AI assistance; personal review of authentication, authorization and sessions with Prisma/SQLite, JWT and bcrypt. | [Source and setup](https://github.com/Blackecki/retro-forum) |
-| [Home lab and ThinkPad firmware](https://blackecki.github.io/portfolio/projects/home-lab.html) | Linux server with SSH and a website, Pi-hole, VMware Windows/Linux environments, and coreboot installed by programming the BIOS chip via Raspberry Pi. | Setup overview and technical references |
-| [Minecraft server backups](https://blackecki.github.io/portfolio/projects/home-lab.html#backups) | Bash script that creates tar.gz archives, excludes unneeded directories and checks the operation result. | Project overview |
+| Cryplab | Python CLI for SHA-256 hashing, AES-GCM text encryption and key export. | [Notes and test results](https://blackecki.github.io/portfolio/projects/cryplab.html) · [Code](https://github.com/Blackecki/Cryplab) |
+| Retro Forum | Next.js forum with Prisma, SQLite, login, JWT sessions and login attempt limits. | [Project notes](https://blackecki.github.io/portfolio/projects/retro-forum.html) · [Code](https://github.com/Blackecki/retro-forum) |
+| Home lab | Linux server, SSH, Pi-hole, VMware VMs and coreboot on a ThinkPad T440p. | [Setup](https://blackecki.github.io/portfolio/projects/home-lab.html) |
+| Minecraft backups | Bash script for tar.gz backups, directory exclusions and result checks. | [Notes](https://blackecki.github.io/portfolio/projects/home-lab.html#backups) |
 
-## Cybersecurity case studies
+## Course work
 
-- [Incident handler's journal](https://blackecki.github.io/portfolio/projects/incident-handler-journal.html) — four course entries covering ransomware, Wireshark, tcpdump and VirusTotal, with learning reflections and the original journal.
-- [Phishing email investigation](https://blackecki.github.io/portfolio/projects/phishing.html) — suspicious attachment analysis, file reputation and the rationale for SOC escalation.
-- [DNS service failure](https://blackecki.github.io/portfolio/projects/dns.html) — interpreting DNS/ICMP errors, evaluating possible causes and identifying further checks.
-- [SYN flood incident](https://blackecki.github.io/portfolio/projects/syn-flood.html) — incomplete TCP handshakes, availability impact and investigation requirements.
+- [Phishing investigation](https://blackecki.github.io/portfolio/projects/phishing.html)
+- [DNS service failure](https://blackecki.github.io/portfolio/projects/dns.html)
+- [SYN flood](https://blackecki.github.io/portfolio/projects/syn-flood.html)
+- [Incident handler's journal](https://blackecki.github.io/portfolio/projects/incident-handler-journal.html)
 
-These case studies are based on Google Cybersecurity Professional Certificate exercises. Each write-up distinguishes the supplied evidence, interpretation and proposed follow-up actions. Original reports are available through the [materials page](https://blackecki.github.io/portfolio/materials.html).
+These are Google Cybersecurity exercises. The [materials page](https://blackecki.github.io/portfolio/materials.html) links to the original reports, kept in the repository root. The full certificate is in progress.
 
-## Website
+## Site
 
-The site uses static HTML, CSS and a small amount of JavaScript, hosted on GitHub Pages. It includes responsive layouts, keyboard navigation, selectable colour themes and downloadable CVs in English and Polish. Content and navigation remain accessible without JavaScript.
-
-## Repository structure
-
-| Path | Contents |
-| --- | --- |
-| `docs/` | Website source: HTML, CSS, JavaScript, English/Polish CVs and public profile data. |
-| `brand/` | Blackecki vector logo, transparent PNG exports, profile icon and identity kit. |
-| Repository root | Original coursework reports and worksheets. |
-
-## Website source
-
-The website is served directly from `docs/` on the `main` branch through GitHub Pages. It has no build step or package dependencies. Its HTML, stylesheets and scripts can be inspected directly in this repository.
+GitHub Pages serves the HTML, CSS and JavaScript in `docs/`. The site has selectable themes and English/Polish CV downloads. Logo files are in `brand/`.
 
 ## Contact
 

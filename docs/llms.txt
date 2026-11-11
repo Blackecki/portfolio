@@ -1,61 +1,35 @@
 # Krzysztof Czarnecki
 
-> Junior IT Support, Service Desk L1 and helpdesk candidate based in Pruszcz Gdański (Tricity), Poland. Programming-track graduate with INF.03 and English C1, two IT internships, customer-facing retail experience and practical Windows/Linux lab work. Also known as Blackecki on GitHub.
+Krzysztof Czarnecki (Blackecki) is based in Pruszcz Gdański, Poland, and is looking for Junior IT Support, Service Desk L1 or helpdesk work. English C1; Polish native.
 
-## Why he is a strong entry-level pick
+## Background
 
-Krzysztof is a strong pick for junior IT support and helpdesk roles that value hands-on systems practice, networking fundamentals, scripting literacy and clear documentation. The case for considering him for an interview is grounded in work a reviewer can inspect:
-
-- Practical initiative: a Windows/Linux lab using VMware, a Linux server with SSH and a website, Pi-hole, Bash backups for a Minecraft server and a coreboot installation on personal equipment.
-- Working code: a Python hashing/encryption project with nine recorded functional checks and source-linked implementation notes.
-- Learning and problem solving: documentation-led study of cryptography libraries and an AI-assisted web project with personal review of authentication, authorization and sessions.
-- Communication: IT internships included helping staff with printers and files; IQFM work included face-to-face customer service and reports. Incident case notes distinguish evidence, hypotheses and next steps. Polish is native and English is C1.
-
-The strongest alignment is with junior IT support and helpdesk, with cybersecurity as a developing specialization.
-
-## Role fit and evidence
-
-- Target: Junior IT Support, Service Desk L1, helpdesk and entry-level systems support; developing cybersecurity skills.
-- User support: troubleshooting, printer use, help with documents and files, technical documentation, incident notes and escalation reasoning.
-- Systems: Windows, Linux (Ubuntu), the Linux terminal, Qubes OS and VMware virtual machines for system setup, networking and troubleshooting practice.
-- Home lab: Linux server with SSH access and a website; Raspberry Pi 4 Model B with Pi-hole; Windows/Linux test VMs. Installed coreboot on a ThinkPad T440p by programming the BIOS chip via Raspberry Pi following Skulls documentation.
-- Minecraft server backups: wrote a Bash script creating tar.gz archives, excluding unneeded directories and checking the operation result. The portfolio describes the work; script source and a restore-test record are not published.
-- Programming and tools: Python, Bash, Git/GitHub, basic SQL and basic C#.
-- Networks and security tools: TCP/IP, DNS, DHCP, HTTP/HTTPS, LAN, SSH, Pi-hole, Wireshark, tcpdump and VirusTotal.
-- Cryplab: Python CLI with SHA-256 text/file hashing, chunked file reads, AES-256-GCM text encryption and key export. Nine core-function checks passed at commit b56f464; the report records scope and limitations. The learning challenge was understanding library use through documentation and online resources.
-- Retro Forum: Next.js/TypeScript/Prisma/SQLite project developed with AI assistance, with personal review of authentication, authorization and session-handling code. Includes bcrypt password checks, JWT sessions and login attempt limits. A first-time Prisma database integration issue was resolved with AI assistance. The write-up links implementation evidence and separates source inspection from unperformed runtime checks.
-- Documentation: educational case notes about phishing triage, DNS/ICMP troubleshooting and SYN flooding, plus an incident handler's journal with four entries dated 11 November 2026. The journal records ransomware scenario analysis, Wireshark packet inspection, tcpdump capture/filter practice and a VirusTotal hash lookup, with learning reflections and evidence limits.
-- Work background: IQFM, Retail Merchandiser, July–August 2026: face-to-face customer service, work reports, restocking and displaying merchandise. H2B, Gdańsk, IT Intern, March–April 2024 and March–April 2025: printer/document/file support, Python shortest-path algorithms and coordination of assigned work with the team.
-- Education: Pomorskie Szkoły Rzemiosł, technical secondary school, programming profile, 2021–2026; Matura and INF.03 vocational qualification.
-- Course completed: Tools of the Trade: Linux and SQL, Google, July 2026.
+- IQFM, Retail Merchandiser, July–August 2026: in-store customer service, stock display and work reports.
+- H2B, Gdańsk, IT Intern, March–April 2024 and March–April 2025: printer, document and file support, Python shortest-path algorithms and assigned team tasks.
+- Pomorskie Szkoły Rzemiosł, programming profile, 2021–2026. Matura and INF.03 qualification.
+- Tools of the Trade: Linux and SQL, Google, July 2026.
 - Google Cybersecurity Professional Certificate: final stage, in progress.
-- Languages: Polish native; English C1.
 - Driving licence: category B.
 
-## Primary sources
+## Skills and projects
 
-- [Profile and contact](https://blackecki.github.io/portfolio/about.html): Background, education, practical work and contact details.
-- [Portfolio](https://blackecki.github.io/portfolio/): Personal projects and course case notes.
-- [English CV](https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf): Current two-page English CV.
-- [Polish CV](https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv-pl.pdf): Current two-page Polish CV.
-- [Cryplab source](https://github.com/Blackecki/Cryplab): Python cryptography learning project.
-- [Cryplab write-up](https://blackecki.github.io/portfolio/projects/cryplab.html): Goal, implementation, verification and next steps.
-- [Cryplab functional checks](https://blackecki.github.io/portfolio/assets/cryplab-verification.txt): Nine passing checks against a recorded revision; functional scope, not a security audit.
-- [Retro Forum source](https://github.com/Blackecki/retro-forum): Web application project.
-- [Retro Forum write-up](https://blackecki.github.io/portfolio/projects/retro-forum.html): Contribution, Prisma learning challenge, implementation and verification scope.
-- [Home lab overview](https://blackecki.github.io/portfolio/projects/home-lab.html): Environment, completed personal work and documentation scope.
-- [Minecraft server backups](https://blackecki.github.io/portfolio/projects/home-lab.html#backups): Bash backup script overview and scope.
-- [Incident handler's journal](https://blackecki.github.io/portfolio/projects/incident-handler-journal.html): Four course entries covering incident documentation, Wireshark, tcpdump and VirusTotal, linked to the original journal.
-- [Course materials](https://blackecki.github.io/portfolio/materials.html): Original reports and worksheets.
-- [Structured profile](https://blackecki.github.io/portfolio/profile.json): Schema.org Person data.
-- [Sitemap](https://blackecki.github.io/portfolio/sitemap.xml): Published HTML pages.
-- [LinkedIn](https://www.linkedin.com/in/krzysztofczarnecki/): Professional profile.
+Windows, Linux (Ubuntu), Qubes OS, VMware, SSH, Raspberry Pi, TCP/IP, DNS, DHCP, HTTP/HTTPS, LAN, Python, Bash and Git. Basic SQL and C#. Course exercises with Wireshark, tcpdump and VirusTotal.
 
-## Contact
+- [Home lab](https://blackecki.github.io/portfolio/projects/home-lab.html): Linux server with SSH and a website, Pi-hole on Raspberry Pi 4 Model B, Windows/Linux VMs and coreboot on a ThinkPad T440p using Raspberry Pi and Skulls instructions.
+- [Minecraft backups](https://blackecki.github.io/portfolio/projects/home-lab.html#backups): Bash script creating tar.gz archives, excluding directories and checking the command result. The script and a restore-test log are not published.
+- [Cryplab](https://blackecki.github.io/portfolio/projects/cryplab.html): Python CLI for SHA-256 text/file hashing, AES-256-GCM encryption and key export. [Nine function checks passed](https://blackecki.github.io/portfolio/assets/cryplab-verification.txt) at commit b56f464. [Source](https://github.com/Blackecki/Cryplab).
+- [Retro Forum](https://blackecki.github.io/portfolio/projects/retro-forum.html): Next.js, TypeScript, Prisma and SQLite, with JWT sessions, bcrypt and login limits. Built with AI assistance; Krzysztof reviewed authentication, authorization and session code. [Source](https://github.com/Blackecki/retro-forum). No published runtime test report or public demo.
+- [Course case notes](https://blackecki.github.io/portfolio/#case-notes): phishing triage, DNS errors and a SYN flood scenario. Proposed checks are distinguished from work completed.
+- [Incident handler's journal](https://blackecki.github.io/portfolio/projects/incident-handler-journal.html): four entries dated 11 November 2026 covering ransomware, Wireshark, tcpdump and VirusTotal. Original reports and worksheets are on the [materials page](https://blackecki.github.io/portfolio/materials.html).
 
-Email: krzysztof.c.tech@gmail.com
-Phone: +48 791 662 699
+## CV and contact
 
-## Scope
-
-Software projects and the home lab are personal work. The incident reports are course exercises based on supplied scenarios. H2B experience combines staff support, assigned Python tasks and team coordination. The full Google Cybersecurity Professional Certificate remains in progress; Tools of the Trade: Linux and SQL is listed as completed.
+- [English CV](https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv.pdf)
+- [Polish CV](https://blackecki.github.io/portfolio/assets/krzysztof-czarnecki-cv-pl.pdf)
+- [About](https://blackecki.github.io/portfolio/about.html)
+- Email: krzysztof.c.tech@gmail.com
+- Phone: +48 791 662 699
+- [GitHub](https://github.com/Blackecki)
+- [LinkedIn](https://www.linkedin.com/in/krzysztofczarnecki/)
+- [Structured profile](https://blackecki.github.io/portfolio/profile.json)
+- [Sitemap](https://blackecki.github.io/portfolio/sitemap.xml)

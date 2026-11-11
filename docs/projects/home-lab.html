@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home lab and ThinkPad — Krzysztof Czarnecki</title>
-  <meta name="description" content="A Linux server with SSH and a website, VMware Windows/Linux environments, Raspberry Pi with Pi-hole, Bash backups for Minecraft and coreboot on a ThinkPad T440p.">
+  <meta name="description" content="My Linux server, Pi-hole and VMware setup, a Bash backup script for Minecraft, and coreboot on a ThinkPad T440p.">
   <link rel="icon" href="../assets/favicon-32.png?v=3268a8ee5b" sizes="32x32" type="image/png">
   <link rel="icon" href="../assets/favicon.svg?v=c19265df07" type="image/svg+xml"><script src="../assets/theme.js?v=65c7694d4d"></script>
 <link rel="stylesheet" href="../assets/style.css?v=b01175bdee">
@@ -13,7 +13,7 @@
 <meta name="robots" content="index, follow">
 <meta name="author" content="Krzysztof Czarnecki">
 <meta property="og:title" content="Home lab and ThinkPad — Krzysztof Czarnecki">
-<meta property="og:description" content="A Linux server with SSH and a website, VMware Windows/Linux environments, Raspberry Pi with Pi-hole, Bash backups for Minecraft and coreboot on a ThinkPad T440p.">
+<meta property="og:description" content="My Linux server, Pi-hole and VMware setup, a Bash backup script for Minecraft, and coreboot on a ThinkPad T440p.">
 <meta property="og:url" content="https://blackecki.github.io/portfolio/projects/home-lab.html">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
@@ -28,7 +28,7 @@
       "familyName": "Czarnecki",
       "alternateName": "Blackecki",
       "url": "https://blackecki.github.io/portfolio/about.html",
-      "description": "Junior IT Support, Service Desk L1 and helpdesk candidate with English C1, INF.03, two IT internships and customer-facing retail experience. Hands-on Windows/Linux, VMware, SSH, Pi-hole, Bash backups and Python projects.",
+      "description": "Krzysztof Czarnecki is looking for Junior IT Support or Service Desk work in the Tricity area. INF.03, English C1, two IT internships, retail experience, a Windows/Linux home lab and Python/Bash projects.",
       "email": "mailto:krzysztof.c.tech@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -122,7 +122,7 @@
       "@id": "https://blackecki.github.io/portfolio/projects/home-lab.html#webpage",
       "url": "https://blackecki.github.io/portfolio/projects/home-lab.html",
       "name": "Home lab and ThinkPad — Krzysztof Czarnecki",
-      "description": "A Linux server with SSH and a website, VMware Windows/Linux environments, Raspberry Pi with Pi-hole, Bash backups for Minecraft and coreboot on a ThinkPad T440p.",
+      "description": "My Linux server, Pi-hole and VMware setup, a Bash backup script for Minecraft, and coreboot on a ThinkPad T440p.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://blackecki.github.io/portfolio/#website"
@@ -156,40 +156,31 @@
 </header>
     <nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Projects</a><a href="../materials.html">Materials</a><a href="../about.html">About</a><a href="../assets/krzysztof-czarnecki-cv.pdf?v=005d302bd6">CV</a><a class="external" href="https://github.com/Blackecki">GitHub ↗</a></nav>
     <div class="layout">
-      <aside class="sidebar" aria-label="Project navigation"><section class="contents"><h2>On this page</h2><ul><li><a href="#scope">Work completed</a></li><li><a href="#backups">Minecraft backups</a></li><li><a href="#relevance">IT support relevance</a></li><li><a href="#environment">Environment</a></li><li><a href="#evidence">Evidence and scope</a></li></ul></section><section><h2>Project context</h2><p>VMware · Pi-hole · coreboot</p><p><a href="https://github.com/merge/skulls">Skulls documentation ↗</a></p></section></aside>
+      <aside class="sidebar" aria-label="Project navigation"><section class="contents"><h2>On this page</h2><ul><li><a href="#scope">Setup</a></li><li><a href="#backups">Minecraft backups</a></li><li><a href="#environment">Equipment</a></li><li><a href="#evidence">References</a></li></ul></section><section><h2>Links</h2><p>VMware · Pi-hole · coreboot</p><p><a href="https://github.com/merge/skulls">Skulls documentation ↗</a></p></section></aside>
       <main id="main" class="article">
         <p class="breadcrumb"><a href="../index.html#personal-projects">Personal projects</a> / Home lab and ThinkPad</p>
         <h1>Home lab and ThinkPad</h1>
-        <div class="meta"><span>Personal learning projects</span><span>Linux · VMware · SSH · Bash · coreboot</span></div>
-        <p class="intro">My own equipment is a place to practise system setup, network services, server backups and firmware installation.</p>
-        <h2 id="scope">Work completed</h2>
+        <div class="meta"><span>Personal projects</span><span>Linux · VMware · SSH · Bash · coreboot</span></div>
+        <p class="intro">I use my own equipment to try out Linux services, run virtual machines and write small scripts.</p>
+        <h2 id="scope">What I set up</h2>
         <ul>
-          <li>A Raspberry Pi home lab with Pi-hole.</li>
-          <li>A Linux server with SSH access and a website, for hands-on practice configuring network services.</li>
-          <li>Windows and Linux virtual environments using VMware.</li>
-          <li>A coreboot installation on my ThinkPad T440p, programming the BIOS chip via Raspberry Pi following the Skulls instructions.</li>
+          <li>A Linux server with SSH access and a website.</li>
+          <li>Pi-hole on a Raspberry Pi 4 Model B.</li>
+          <li>Windows and Linux test environments in VMware.</li>
+          <li>Coreboot on a ThinkPad T440p. I programmed the BIOS chip with a Raspberry Pi, following the Skulls instructions.</li>
         </ul>
         <h2 id="backups">Minecraft server backups</h2>
-        <p>I wrote a Bash script for a Minecraft server on Linux. It creates <code>tar.gz</code> backup archives, excludes unneeded directories and checks whether the operation succeeded.</p>
-        <p>The project gave me practice with shell scripting, file archiving and checking the result of a server maintenance task. The script and a restore-test record are not published here; the backup description records the work described in my CV.</p>
-        <h2 id="relevance">Why this is relevant to IT support</h2>
-        <p>The useful experience is working with operating systems, network services and technical instructions on real equipment. The lab supports practice with system configuration and troubleshooting, while the firmware work involved following a hardware-specific installation procedure.</p>
-        <h2 id="environment">Environment</h2>
-        <div class="table-scroll"><table><thead><tr><th scope="col">Component</th><th scope="col">Setup</th></tr></thead><tbody>
-          <tr><td>Home lab</td><td>Raspberry Pi 4 Model B with Pi-hole</td></tr>
-          <tr><td>Virtualization</td><td>VMware; Windows and Linux environments</td></tr>
-          <tr><td>Network services</td><td>Linux server with SSH access and a website; Pi-hole DNS</td></tr>
-          <tr><td>Server maintenance</td><td>Bash backup script for a Minecraft server; tar.gz archives</td></tr>
-          <tr><td>Firmware project</td><td>Lenovo ThinkPad T440p; coreboot via Skulls</td></tr>
-        </tbody></table></div>
-        <h2 id="evidence">Evidence and documentation scope</h2>
-        <p>This page records my setup and completed personal work. Configuration exports, screenshots and a step-by-step verification log are not published here. The linked project documentation explains the tools and installation process; it is a reference rather than proof of my individual setup.</p>
-        <p>The next useful addition is a short troubleshooting record showing a symptom, the checks performed and the outcome. That would make the practical work easier for another person to assess.</p>
+        <p>I wrote a Bash script that backs up a Minecraft server on Linux. It creates <code>tar.gz</code> archives, skips unneeded directories and checks whether the command succeeded.</p>
+        <p>I haven't published the script or a restore-test log yet.</p>
+        <h2 id="environment">Equipment</h2>
+        <p>Raspberry Pi 4 Model B, a Lenovo ThinkPad T440p and VMware for Windows/Linux virtual machines.</p>
+        <h2 id="evidence">References</h2>
+        <p>These are the tools and instructions used for the setup. I haven't published configuration exports or a step-by-step lab log.</p>
         <ul class="reading-list">
-          <li><a href="https://docs.pi-hole.net/">Pi-hole documentation ↗</a><span>Reference for the DNS filtering service</span></li>
-          <li><a href="https://github.com/merge/skulls/tree/master/t440p">Skulls for ThinkPad T440p ↗</a><span>Reference for the coreboot installation</span></li>
+          <li><a href="https://docs.pi-hole.net/">Pi-hole documentation ↗</a><span>DNS filtering setup</span></li>
+          <li><a href="https://github.com/merge/skulls/tree/master/t440p">Skulls for ThinkPad T440p ↗</a><span>Coreboot installation instructions</span></li>
         </ul>
-        <div class="next"><a href="../index.html#personal-projects">← All personal projects</a><a href="../about.html#contact">CV and contact →</a></div>
+        <div class="next"><a href="../index.html#personal-projects">← Personal projects</a><a href="../about.html#contact">CV and contact →</a></div>
       </main>
     </div>
     <footer class="footer"><span>Krzysztof Czarnecki · Portfolio</span><a href="https://github.com/Blackecki/portfolio">View on GitHub</a></footer>

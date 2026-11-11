@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cryplab — Krzysztof Czarnecki</title>
-  <meta name="description" content="Cryplab: a Python cryptography learning project with source code, implementation notes and nine recorded functional checks.">
+  <meta name="description" content="Cryplab: a Python CLI for hashing and encryption. Features, nine function checks, code and setup instructions.">
   <link rel="icon" href="../assets/favicon-32.png?v=3268a8ee5b" sizes="32x32" type="image/png">
   <link rel="icon" href="../assets/favicon.svg?v=c19265df07" type="image/svg+xml"><script src="../assets/theme.js?v=65c7694d4d"></script>
 <link rel="stylesheet" href="../assets/style.css?v=b01175bdee">
@@ -13,7 +13,7 @@
 <meta name="robots" content="index, follow">
 <meta name="author" content="Krzysztof Czarnecki">
 <meta property="og:title" content="Cryplab — Krzysztof Czarnecki">
-<meta property="og:description" content="Cryplab: a Python cryptography learning project with source code, implementation notes and nine recorded functional checks.">
+<meta property="og:description" content="Cryplab: a Python CLI for hashing and encryption. Features, nine function checks, code and setup instructions.">
 <meta property="og:url" content="https://blackecki.github.io/portfolio/projects/cryplab.html">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
@@ -28,7 +28,7 @@
       "familyName": "Czarnecki",
       "alternateName": "Blackecki",
       "url": "https://blackecki.github.io/portfolio/about.html",
-      "description": "Junior IT Support, Service Desk L1 and helpdesk candidate with English C1, INF.03, two IT internships and customer-facing retail experience. Hands-on Windows/Linux, VMware, SSH, Pi-hole, Bash backups and Python projects.",
+      "description": "Krzysztof Czarnecki is looking for Junior IT Support or Service Desk work in the Tricity area. INF.03, English C1, two IT internships, retail experience, a Windows/Linux home lab and Python/Bash projects.",
       "email": "mailto:krzysztof.c.tech@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -122,7 +122,7 @@
       "@id": "https://blackecki.github.io/portfolio/projects/cryplab.html#webpage",
       "url": "https://blackecki.github.io/portfolio/projects/cryplab.html",
       "name": "Cryplab — Krzysztof Czarnecki",
-      "description": "Cryplab: a Python cryptography learning project with source code, implementation notes and nine recorded functional checks.",
+      "description": "Cryplab: a Python CLI for hashing and encryption. Features, nine function checks, code and setup instructions.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://blackecki.github.io/portfolio/#website"
@@ -156,45 +156,43 @@
 </header>
     <nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Projects</a><a href="../materials.html">Materials</a><a href="../about.html">About</a><a href="../assets/krzysztof-czarnecki-cv.pdf?v=005d302bd6">CV</a><a class="external" href="https://github.com/Blackecki">GitHub ↗</a></nav>
     <div class="layout">
-      <aside class="sidebar" aria-label="Project navigation"><section class="contents"><h2>On this page</h2><ul><li><a href="#goal">Goal and contribution</a></li><li><a href="#implementation">Implementation</a></li><li><a href="#verification">Verification</a></li><li><a href="#decisions">Decisions</a></li><li><a href="#evidence">Evidence</a></li></ul></section><section><h2>Project context</h2><p>Python · Hashing · AES-GCM</p><p><a href="https://github.com/Blackecki/Cryplab">Source on GitHub ↗</a></p></section></aside>
+      <aside class="sidebar" aria-label="Project navigation"><section class="contents"><h2>On this page</h2><ul><li><a href="#goal">Writing the tool</a></li><li><a href="#implementation">Features</a></li><li><a href="#verification">Tests</a></li><li><a href="#decisions">Next changes</a></li><li><a href="#evidence">Code</a></li></ul></section><section><h2>Project context</h2><p>Python · Hashing · AES-GCM</p><p><a href="https://github.com/Blackecki/Cryplab">Source on GitHub ↗</a></p></section></aside>
       <main id="main" class="article">
         <p class="breadcrumb"><a href="../index.html#personal-projects">Personal projects</a> / Cryplab</p>
         <h1>Cryplab</h1>
-        <div class="meta"><span>Personal learning project</span><span>Python · Hashing · AES-GCM</span></div>
-        <p class="intro">A Python command-line project for understanding hashing and authenticated encryption through small, working features.</p>
-        <p><a href="https://github.com/Blackecki/Cryplab">Source code ↗</a> · <a href="../assets/cryplab-verification.txt?v=2a96d7a97e">Functional verification report ↗</a></p>
-        <h2 id="goal">Goal and contribution</h2>
-        <p>I built Cryplab to move from reading about cryptography to using the libraries correctly. My main learning challenge was understanding the library interfaces and how to connect them to a command-line workflow. I worked through this using documentation and online resources.</p>
-        <p>The project uses Python's <code>hashlib</code> and the <code>cryptography</code> library. The encryption algorithm is provided by the library; my implementation handles the surrounding workflow, encoding, inputs and outputs.</p>
-        <h2 id="implementation">What is implemented</h2>
+        <div class="meta"><span>Python CLI</span><span>SHA-256 · AES-GCM</span></div>
+        <p class="intro">A command-line tool for hashing text and files, encrypting text and exporting keys.</p>
+        <p><a href="https://github.com/Blackecki/Cryplab">Code on GitHub ↗</a> · <a href="../assets/cryplab-verification.txt?v=2a96d7a97e">Test results</a></p>
+        <h2 id="goal">Writing the tool</h2>
+        <p>I built Cryplab to learn how to use Python's cryptography libraries. Understanding the library interfaces was the hardest part. I worked through the documentation and online examples, then connected the functions to a terminal menu.</p>
+        <h2 id="implementation">Features</h2>
         <ul>
-          <li><strong>Text hashing:</strong> UTF-8 input and a SHA-256 hexadecimal digest.</li>
-          <li><strong>File hashing:</strong> binary files are read in chunks rather than loaded entirely into memory.</li>
-          <li><strong>Authenticated encryption:</strong> AES-256-GCM, a generated 32-byte key and a fresh 12-byte nonce per encryption call.</li>
-          <li><strong>Command-line workflow:</strong> menu actions for text hashing, file hashing and text encryption, with Base64 output and key export.</li>
+          <li>SHA-256 text hashing with Python's <code>hashlib</code>.</li>
+          <li>File hashing in chunks, so the whole file doesn't have to fit in memory.</li>
+          <li>AES-256-GCM text encryption using <code>cryptography</code>, a generated 32-byte key and a fresh 12-byte nonce per call.</li>
+          <li>Base64 output and key export through a menu.</li>
         </ul>
-        <h2 id="verification">Recorded verification</h2>
-        <p>Nine functional checks passed against <a href="https://github.com/Blackecki/Cryplab/tree/b56f464fe9b16eae49bf57ee680993d185a3356d">commit b56f464</a>. The checks exercise the hashing and encryption functions directly.</p>
-        <div class="table-scroll"><table><thead><tr><th scope="col">Area</th><th scope="col">Checks and result</th></tr></thead><tbody>
-          <tr><td>SHA-256</td><td>Known answers for <code>abc</code> and empty text; a file larger than the read buffer compared with a standard-library digest. All passed.</td></tr>
-          <tr><td>AES-GCM</td><td>Key length, Unicode and empty-text round trips, rejection of a wrong key and modified ciphertext. All passed.</td></tr>
-          <tr><td>Key representation</td><td>Base64 export/import preserved the key. Passed.</td></tr>
-        </tbody></table></div>
-        <p>The <a href="../assets/cryplab-verification.txt?v=2a96d7a97e">verification record</a> identifies the source revision, runtime, checks and limits. This covers core function behaviour; the complete interactive CLI and production key handling require separate checks.</p>
-        <h2 id="decisions">Decisions and next steps</h2>
-        <p>Using a maintained cryptography library keeps algorithm implementation separate from application code. Chunked reads suit file hashing without requiring the entire file in memory. Base64 makes binary output transferable as text; it does not protect a key.</p>
-        <p>The next improvements are repeatable automated tests in the project repository, a dependency file and clearer key-handling documentation.</p>
-        <details><summary>Run the CLI locally</summary><p>From a local development environment:</p><pre class="code-block"><code>git clone https://github.com/Blackecki/Cryplab.git
+        <h2 id="verification">Tests</h2>
+        <p>Nine checks passed against <a href="https://github.com/Blackecki/Cryplab/tree/b56f464fe9b16eae49bf57ee680993d185a3356d">commit b56f464</a>:</p>
+        <ul>
+          <li>SHA-256 known answers for <code>abc</code> and empty text, plus a file larger than the read buffer.</li>
+          <li>Key length, Unicode and empty-text encryption round trips, and rejection of a wrong key or modified ciphertext.</li>
+          <li>Base64 key export and import.</li>
+        </ul>
+        <p>The <a href="../assets/cryplab-verification.txt?v=2a96d7a97e">test record</a> lists the runtime and results. It covers the hashing and encryption functions. The full menu flow and key storage need separate testing.</p>
+        <h2 id="decisions">Next changes</h2>
+        <p>I want to add repeatable tests to the repository, a dependency file and clearer instructions for handling keys. Base64 only changes their representation; exported keys still need to be kept private.</p>
+        <details><summary>Run locally</summary><pre class="code-block"><code>git clone https://github.com/Blackecki/Cryplab.git
 cd Cryplab
 python -m pip install cryptography
-python main.py</code></pre><p>The recorded verification tests the library functions rather than every menu interaction.</p></details>
-        <h2 id="evidence">Implementation evidence</h2>
+python main.py</code></pre></details>
+        <h2 id="evidence">Code</h2>
         <ul class="reading-list">
-          <li><a href="https://github.com/Blackecki/Cryplab/blob/b56f464fe9b16eae49bf57ee680993d185a3356d/cryp/hashing.py">Hashing implementation ↗</a><span>Text and streamed file hashing</span></li>
-          <li><a href="https://github.com/Blackecki/Cryplab/blob/b56f464fe9b16eae49bf57ee680993d185a3356d/cryp/encryption.py">Encryption and encoding implementation ↗</a><span>AES-GCM functions, nonce generation and Base64 conversion</span></li>
-          <li><a href="https://github.com/Blackecki/Cryplab/blob/b56f464fe9b16eae49bf57ee680993d185a3356d/main.py">Application entry point ↗</a><span>Menu-based workflow</span></li>
+          <li><a href="https://github.com/Blackecki/Cryplab/blob/b56f464fe9b16eae49bf57ee680993d185a3356d/cryp/hashing.py">hashing.py ↗</a><span>Text and file hashing</span></li>
+          <li><a href="https://github.com/Blackecki/Cryplab/blob/b56f464fe9b16eae49bf57ee680993d185a3356d/cryp/encryption.py">encryption.py ↗</a><span>AES-GCM, nonce generation and Base64 conversion</span></li>
+          <li><a href="https://github.com/Blackecki/Cryplab/blob/b56f464fe9b16eae49bf57ee680993d185a3356d/main.py">main.py ↗</a><span>The terminal menu</span></li>
         </ul>
-        <div class="next"><a href="../index.html#personal-projects">← All personal projects</a><a href="../about.html#contact">CV and contact →</a></div>
+        <div class="next"><a href="../index.html#personal-projects">← Personal projects</a><a href="../about.html#contact">CV and contact →</a></div>
       </main>
     </div>
     <footer class="footer"><span>Krzysztof Czarnecki · Portfolio</span><a href="https://github.com/Blackecki/portfolio">View on GitHub</a></footer>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Incident handler's journal — Krzysztof Czarnecki</title>
-  <meta name="description" content="Four Google Cybersecurity learning entries covering a ransomware scenario, Wireshark packet inspection, tcpdump capture and VirusTotal file reputation.">
+  <meta name="description" content="Four course journal entries about ransomware, Wireshark, tcpdump and VirusTotal, with reflections and the original document.">
   <link rel="icon" href="../assets/favicon-32.png?v=3268a8ee5b" sizes="32x32" type="image/png">
   <link rel="icon" href="../assets/favicon.svg?v=c19265df07" type="image/svg+xml"><script src="../assets/theme.js?v=65c7694d4d"></script>
 <link rel="stylesheet" href="../assets/style.css?v=b01175bdee">
@@ -13,7 +13,7 @@
 <meta name="robots" content="index, follow">
 <meta name="author" content="Krzysztof Czarnecki">
 <meta property="og:title" content="Incident handler&#x27;s journal — Krzysztof Czarnecki">
-<meta property="og:description" content="Four Google Cybersecurity learning entries covering a ransomware scenario, Wireshark packet inspection, tcpdump capture and VirusTotal file reputation.">
+<meta property="og:description" content="Four course journal entries about ransomware, Wireshark, tcpdump and VirusTotal, with reflections and the original document.">
 <meta property="og:url" content="https://blackecki.github.io/portfolio/projects/incident-handler-journal.html">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
@@ -28,7 +28,7 @@
       "familyName": "Czarnecki",
       "alternateName": "Blackecki",
       "url": "https://blackecki.github.io/portfolio/about.html",
-      "description": "Junior IT Support, Service Desk L1 and helpdesk candidate with English C1, INF.03, two IT internships and customer-facing retail experience. Hands-on Windows/Linux, VMware, SSH, Pi-hole, Bash backups and Python projects.",
+      "description": "Krzysztof Czarnecki is looking for Junior IT Support or Service Desk work in the Tricity area. INF.03, English C1, two IT internships, retail experience, a Windows/Linux home lab and Python/Bash projects.",
       "email": "mailto:krzysztof.c.tech@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -122,7 +122,7 @@
       "@id": "https://blackecki.github.io/portfolio/projects/incident-handler-journal.html#webpage",
       "url": "https://blackecki.github.io/portfolio/projects/incident-handler-journal.html",
       "name": "Incident handler's journal — Krzysztof Czarnecki",
-      "description": "Four Google Cybersecurity learning entries covering a ransomware scenario, Wireshark packet inspection, tcpdump capture and VirusTotal file reputation.",
+      "description": "Four course journal entries about ransomware, Wireshark, tcpdump and VirusTotal, with reflections and the original document.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://blackecki.github.io/portfolio/#website"
@@ -157,44 +157,35 @@
     <nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Projects</a><a href="../materials.html">Materials</a><a href="../about.html">About</a><a href="../assets/krzysztof-czarnecki-cv.pdf?v=005d302bd6">CV</a><a class="external" href="https://github.com/Blackecki">GitHub ↗</a></nav>
     <div class="layout">
       <aside class="sidebar" aria-label="Journal navigation">
-        <section class="contents"><h2>On this page</h2><ul><li><a href="#contribution">My contribution</a></li><li><a href="#entries">Four learning entries</a></li><li><a href="#reflection">What I learned</a></li><li><a href="#scope">Evidence and scope</a></li><li><a href="#sources">Source material</a></li></ul></section>
+        <section class="contents"><h2>On this page</h2><ul><li><a href="#contribution">The journal</a></li><li><a href="#entries">Entries</a></li><li><a href="#reflection">More practice</a></li><li><a href="#scope">File contents</a></li><li><a href="#sources">Files</a></li></ul></section>
         <section><h2>Context</h2><p>Google Cybersecurity Certificate</p><p class="muted">Course exercises<br>11 November 2026</p></section>
       </aside>
       <main id="main" class="article">
         <p class="breadcrumb"><a href="../index.html#case-notes">Incident case notes</a> / Incident handler's journal</p>
         <h1>Incident handler's journal</h1>
-        <div class="meta"><span>Course exercises</span><span>11 November 2026</span><span>Wireshark · tcpdump · VirusTotal</span></div>
-        <p class="intro">Four learning entries connecting incident documentation with packet inspection, command-line capture and file-reputation checks.</p>
-        <p><a href="https://github.com/Blackecki/portfolio/blob/main/Incident%20Handler%20Journal.docx">Original journal on GitHub ↗</a> <span class="small muted">DOCX</span></p>
-        <h2 id="contribution">My contribution</h2>
-        <p>I completed the journal using the course template, recording each activity, the tools used, incident details where applicable and my takeaways. The work combines two supplied incident scenarios with practical exercises in Wireshark and tcpdump.</p>
-        <h2 id="entries">Four learning entries</h2>
-        <h3>1. Ransomware at a health care company</h3>
-        <p>I summarized a scenario in which a phishing email led to ransomware encrypting company files. Using the five W's, I recorded who was involved, what happened, when and where it occurred, and the attackers' apparent financial motive.</p>
-        <p>The scenario reports that the company shut down its computer systems. My notes discuss response stages and possible improvements, including disconnected backups, staff awareness and a response plan. No analysis tool was used for this entry.</p>
-        <h3>2. Inspecting a capture in Wireshark</h3>
-        <p>I opened the supplied packet capture and examined individual packets and their details to understand communication between devices. This gave me practice navigating a graphical traffic-analysis tool and relating packet information to detection and analysis.</p>
-        <h3>3. Capturing traffic with tcpdump</h3>
-        <p>I used tcpdump in the terminal to capture network packets and tried filters to narrow the traffic shown. Incorrectly typed commands initially produced unexpected results; checking the instructions and repeating the steps helped me complete the activity.</p>
-        <h3>4. Checking file reputation with VirusTotal</h3>
-        <p>For a supplied scenario involving a suspicious email attachment at a financial services company, I checked the file's SHA-256 hash with VirusTotal and recorded the reported malicious reputation. The journal identifies the alert time and affected environment from the scenario.</p>
-        <p>This uses the same file hash as my <a href="phishing.html">phishing investigation case note</a>. The journal adds my activity record and reflection; it does not represent a separate real-world incident.</p>
-        <h2 id="reflection">What I learned</h2>
-        <ul>
-          <li><strong>Keep usable notes:</strong> record the activity, tools, relevant details and follow-up ideas so another reader can follow the reasoning.</li>
-          <li><strong>Work through unfamiliar tools:</strong> Wireshark became easier to navigate with practice; tcpdump required more care with command syntax.</li>
-          <li><strong>Corroborate an alert:</strong> a file-reputation result is one input to an investigation and should be considered alongside other evidence.</li>
-        </ul>
-        <p>My next practice goal is to inspect another packet capture and become more confident with command-line traffic analysis.</p>
-        <h2 id="scope">Evidence and scope</h2>
-        <p>The original journal contains four entries dated 11 November 2026 and a final reflection. It records my course activities and observations. The Wireshark and tcpdump exercises do not describe actual incidents; the ransomware and attachment cases are supplied scenarios.</p>
-        <p>The journal does not include packet captures, command transcripts or tool-result screenshots. It supports a record of learning and tool use, with technical conclusions limited to the information recorded. This portfolio summary does not include a new VirusTotal lookup.</p>
-        <h2 id="sources">Source material</h2>
+        <div class="meta"><span>Google course exercises</span><span>11 November 2026</span></div>
+        <p class="intro">Four entries about ransomware, packet analysis and file reputation, followed by notes on what I found difficult.</p>
+        <h2 id="contribution">The journal</h2>
+        <p>I used the course template to record the activity, tools, incident details and takeaways. Two entries cover supplied incident scenarios; the other two describe exercises with Wireshark and tcpdump.</p>
+        <h2 id="entries">Entries</h2>
+        <h3>Ransomware</h3>
+        <p>I summarized a phishing-led ransomware attack at a health care company using the five W's. The scenario says the company shut down its systems. My notes cover the response stages and suggest disconnected backups, staff training and a response plan. I used no analysis tool for this entry.</p>
+        <h3>Wireshark</h3>
+        <p>I opened the supplied capture and inspected individual packets and their details. The amount of information was confusing at first; looking through the packets made it easier to follow.</p>
+        <h3>tcpdump</h3>
+        <p>I captured traffic in the terminal and tried filters. This was the hardest activity: I mistyped commands and got unexpected output. Checking the instructions and repeating the steps helped me finish it.</p>
+        <h3>VirusTotal</h3>
+        <p>I checked the SHA-256 hash of an email attachment in a financial services scenario. The hash and reported malicious reputation also appear in my <a href="phishing.html">phishing case note</a>.</p>
+        <h2 id="reflection">What I want to practise next</h2>
+        <p>I'd like to inspect another packet capture and get more comfortable with command-line tools. The exercises also helped me see why an incident record needs clear notes and why a reputation result needs other evidence.</p>
+        <h2 id="scope">What's in the file</h2>
+        <p>The journal contains four entries and a reflection, all dated 11 November 2026. It doesn't include packet captures, command output or tool screenshots.</p>
+        <h2 id="sources">Files</h2>
         <ul class="reading-list">
-          <li><a href="https://github.com/Blackecki/portfolio/blob/main/Incident%20Handler%20Journal.docx">Incident Handler Journal ↗</a><span>DOCX · Four completed course entries and reflections</span></li>
-          <li><a href="phishing.html">Related phishing investigation</a><span>Case note covering the same attachment hash, escalation reasoning and supporting worksheet</span></li>
+          <li><a href="https://github.com/Blackecki/portfolio/blob/main/Incident%20Handler%20Journal.docx">Original journal ↗</a><span>DOCX · Completed course template</span></li>
+          <li><a href="phishing.html">Related phishing case note</a><span>The attachment hash and escalation decision</span></li>
         </ul>
-        <div class="next"><a href="../index.html#case-notes">← All incident case notes</a><a href="../materials.html">Original course materials →</a></div>
+        <div class="next"><a href="../index.html#case-notes">← Incident case notes</a><a href="../materials.html">Course materials →</a></div>
       </main>
     </div>
     <footer class="footer"><span>Krzysztof Czarnecki · Portfolio</span><a href="https://github.com/Blackecki/portfolio">View on GitHub</a></footer>
